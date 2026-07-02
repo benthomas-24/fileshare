@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Northeast Bank — Technology Consolidation Tracker</title>
+<link rel="icon" type="image/png" href="data:image/png;base64,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" />
+<style>
+  :root {
+    --navy: #0B4A6E;
+    --blue: #106090;
+    --blue-2: #14709E;
+    --gold: #B07A1E;
+    --gold-deep: #97671533;
+    --ink: #1F2528;
+    --gray: #6E6E6E;
+    --gray-2: #8A8F93;
+    --line: #DCE4EA;
+    --line-soft: #E8EEF2;
+    --tint-blue: #EAF3F8;
+    --tint-gray: #F4F7FA;
+    --tint-gold: #FBF3E2;
+    --paper: #F7FAFC;
+    --card: #FFFFFF;
+
+    --sans: Arial, Helvetica, "Liberation Sans", sans-serif;
+    --mono: Arial, Helvetica, "Liberation Sans", sans-serif;
+
+    --r: 10px;
+    --r-sm: 7px;
+    --shadow: 0 1px 2px rgba(11,74,110,.05), 0 6px 22px rgba(11,74,110,.06);
+    --shadow-lift: 0 2px 6px rgba(11,74,110,.08), 0 14px 40px rgba(11,74,110,.10);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+  }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Masthead ---------- */
+  .masthead {
+    border-top: 4px solid var(--navy);
+    background: var(--card);
+    border-bottom: 1px solid var(--line);
+  }
+  .masthead-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 20px; padding: 20px 24px; max-width: 1080px; margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .brand { display: flex; align-items: center; gap: 14px; }
+  .brand-mark {
+    width: 40px; height: 40px; border-radius: 9px; flex: none;
+    display: block; box-shadow: 0 1px 3px rgba(11,74,110,.22);
+  }
+  .brand-text b { font-size: 17px; color: var(--navy); letter-spacing: .2px; display:block; line-height:1.15;}
+  .brand-text span { font-size: 12px; color: var(--gray); letter-spacing: .3px; }
+  .classif {
+    font-family: var(--mono); font-size: 11px; letter-spacing: .4px;
+    color: var(--gold); background: var(--tint-gold);
+    border: 1px solid #EBD9B0; padding: 6px 11px; border-radius: 100px;
+    white-space: nowrap;
+  }
+
+  /* ---------- Tabs ---------- */
+  .tabbar { background: var(--card); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 20; }
+  .tabs { display: flex; gap: 4px; max-width: 1080px; margin: 0 auto; padding: 0 16px; overflow-x: auto; }
+  .tab {
+    appearance: none; border: 0; background: none; cursor: pointer;
+    font-family: var(--sans); font-size: 14.5px; font-weight: 600; color: var(--gray);
+    padding: 15px 16px 13px; border-bottom: 3px solid transparent;
+    display: flex; align-items: center; gap: 9px; white-space: nowrap;
+    transition: color .15s;
+  }
+  .tab:hover { color: var(--navy); }
+  .tab[aria-selected="true"] { color: var(--navy); border-bottom-color: var(--blue); }
+  .tab .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--line); flex:none; }
+  .tab[data-status="ready"] .dot { background: #2E9E6B; }
+  .tab[data-status="research"] .dot { background: var(--gold); }
+  .tab:focus-visible { outline: 2px solid var(--blue-2); outline-offset: -3px; border-radius: 4px; }
+
+  /* ---------- Panels ---------- */
+  .panel { display: none; padding: 34px 0 72px; animation: fade .28s ease; }
+  .panel.active { display: block; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+  .eyebrow {
+    font-family: var(--mono); font-size: 11.5px; letter-spacing: 1.2px;
+    text-transform: uppercase; color: var(--blue); font-weight: 600; margin: 0 0 8px;
+  }
+  h1.title { font-size: 30px; line-height: 1.15; margin: 0 0 8px; color: var(--navy); letter-spacing: -.4px; }
+  .lede { font-size: 17px; color: #35404A; max-width: 68ch; margin: 0 0 22px; }
+
+  /* ---------- Recommendation callout ---------- */
+  .rec {
+    background: var(--tint-blue); border: 1px solid #CFE2EE; border-left: 4px solid var(--blue);
+    border-radius: var(--r-sm); padding: 15px 18px; margin: 0 0 30px; display:flex; gap:13px; align-items:flex-start;
+  }
+  .rec .ic { flex:none; width:22px; height:22px; margin-top:1px; color: var(--blue); }
+  .rec b { color: var(--navy); }
+  .rec p { margin: 0; font-size: 14.5px; color: #33424D; }
+
+  /* ---------- Section heading ---------- */
+  .sec-head { margin: 40px 0 16px; }
+  .sec-head h2 { font-size: 20px; color: var(--navy); margin: 0 0 4px; letter-spacing: -.2px; }
+  .sec-head p { margin: 0; font-size: 14px; color: var(--gray); }
+
+  /* ---------- Price cards ---------- */
+  .prices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .pcard { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 20px; position: relative; box-shadow: var(--shadow); }
+  .pcard.rec-card { border: 1.5px solid var(--navy); box-shadow: var(--shadow-lift); }
+  .ribbon {
+    position: absolute; top: -1px; right: 16px; transform: translateY(-50%);
+    background: var(--navy); color: #fff; font-size: 10.5px; font-weight: 700;
+    letter-spacing: .8px; text-transform: uppercase; padding: 4px 10px; border-radius: 100px;
+  }
+  .pcard h3 { margin: 0 0 2px; font-size: 16px; color: var(--ink); }
+  .pcard .sub { font-size: 12.5px; color: var(--gray); min-height: 34px; }
+  .pcard .price { font-family: var(--mono); font-size: 30px; color: var(--navy); font-weight: 600; margin-top: 8px; letter-spacing: -1px; }
+  .pcard .price small { font-size: 13px; color: var(--gray); font-weight: 400; letter-spacing: 0; }
+  .pcard .note { font-size: 11.5px; color: var(--gray-2); margin-top: 4px; }
+
+  /* ---------- Replaces mapping ---------- */
+  .maps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .maprow {
+    display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 12px;
+    background: var(--card); border: 1px solid var(--line-soft); border-radius: var(--r-sm); padding: 11px 14px;
+  }
+  .maprow .from { font-size: 13.5px; color: #3A444C; }
+  .maprow .from b { color: var(--ink); }
+  .maprow .arw { color: var(--gold); font-family: var(--mono); font-size: 15px; }
+  .maprow .to { font-size: 13.5px; color: var(--blue); font-weight: 600; text-align: right; }
+
+  /* ---------- Capability matrix ---------- */
+  .matrix { border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: var(--card); box-shadow: var(--shadow); }
+  .mrow { border-top: 1px solid var(--line-soft); }
+  .mrow:first-child { border-top: 0; }
+
+  .mhead {
+    display: grid; grid-template-columns: minmax(0,2.3fr) 1fr 1fr 1.1fr 148px;
+    background: var(--navy); color: #fff; font-size: 12px; font-weight: 600;
+    letter-spacing: .4px; text-transform: uppercase;
+  }
+  .mhead > div { padding: 12px 14px; }
+  .mhead .ent-h { background: rgba(255,255,255,.08); }
+
+  .mgrid {
+    display: grid; grid-template-columns: minmax(0,2.3fr) 1fr 1fr 1.1fr 148px;
+    align-items: stretch;
+  }
+  .mgrid > div { padding: 15px 14px; font-size: 13.5px; }
+  .cap { display: flex; flex-direction: column; gap: 3px; }
+  .cap .name { font-weight: 650; color: var(--ink); font-size: 14px; }
+  .cap .micro { font-size: 12px; color: var(--gray); line-height: 1.35; }
+  .cell { color: #46525A; }
+  .cell .cell-label { display: none; }
+  .cell-ent { background: var(--tint-blue); color: var(--navy); font-weight: 600; border-left: 1px solid #D3E4EF; }
+  .cell.na { color: var(--gray-2); }
+
+  .cell .mk { font-weight: 700; }
+  .cell .mk.ok { color: #2E9E6B; }
+  .cell .mk.no { color: var(--gray-2); }
+
+  .exp-wrap { display: flex; align-items: center; justify-content: center; min-width: 0; padding: 15px 8px !important; }
+  .exp-btn {
+    appearance: none; cursor: pointer; font-family: var(--sans);
+    font-size: 12.5px; font-weight: 600; color: var(--blue);
+    background: var(--tint-gray); border: 1px solid var(--line);
+    border-radius: 100px; padding: 7px 14px; display: inline-flex; align-items: center; gap: 6px;
+    justify-content: center; white-space: nowrap; flex: none;
+    transition: background .15s, border-color .15s, color .15s;
+  }
+  .exp-btn:hover { background: #E7F1F8; border-color: #C7DCEA; color: var(--navy); }
+  .exp-btn:focus-visible { outline: 2px solid var(--blue-2); outline-offset: 2px; }
+  .exp-btn .chev { width: 12px; height: 12px; transition: transform .22s ease; }
+  .exp-btn[aria-expanded="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .exp-btn[aria-expanded="true"] .chev { transform: rotate(180deg); }
+
+  .mrow:hover .cap .name { color: var(--navy); }
+
+  /* expandable panel via grid-rows trick */
+  .drawer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .28s ease; background: var(--tint-gray); }
+  .drawer.open { grid-template-rows: 1fr; }
+  .drawer-inner { overflow: hidden; }
+  .drawer-pad { padding: 4px 20px 22px; border-top: 1px solid var(--line-soft); }
+  .learn {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 18px 26px; padding-top: 16px;
+  }
+  .learn .block h4 {
+    margin: 0 0 5px; font-family: var(--mono); font-size: 11px; letter-spacing: .8px;
+    text-transform: uppercase; color: var(--blue); font-weight: 600;
+  }
+  .learn .block p { margin: 0; font-size: 13.8px; color: #38434B; line-height: 1.6; }
+  .learn .bank { grid-column: 1 / -1; background: var(--tint-gold); border: 1px solid #EBDCB6;
+    border-radius: var(--r-sm); padding: 13px 15px; }
+  .learn .bank h4 { color: var(--gold); }
+  .learn .bank p { color: #5A4A2A; }
+
+  /* ---------- In-research state ---------- */
+  .research {
+    text-align: center; padding: 46px 30px; background: var(--card);
+    border: 1px dashed var(--line); border-radius: var(--r); box-shadow: var(--shadow);
+  }
+  .research .badge {
+    display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono);
+    font-size: 12px; letter-spacing: .5px; color: var(--gold); background: var(--tint-gold);
+    border: 1px solid #EBD9B0; padding: 6px 13px; border-radius: 100px; margin-bottom: 16px;
+  }
+  .research .badge .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+  .research h2 { color: var(--navy); margin: 0 0 8px; font-size: 22px; }
+  .research p { color: var(--gray); max-width: 56ch; margin: 0 auto 18px; font-size: 14.5px; }
+  .research ul { text-align: left; max-width: 460px; margin: 0 auto; padding-left: 0; list-style: none; }
+  .research li { font-size: 14px; color: #3A444C; padding: 8px 0 8px 26px; position: relative; border-top: 1px solid var(--line-soft); }
+  .research li:first-child { border-top: 0; }
+  .research li::before { content: "→"; position: absolute; left: 4px; color: var(--gold); font-family: var(--mono); }
+
+  /* ---------- Footnote ---------- */
+  .foot { margin-top: 34px; font-size: 12.5px; color: var(--gray-2); border-top: 1px solid var(--line); padding-top: 16px; }
+  .foot b { color: var(--gray); }
+
+  .hint { font-size: 13px; color: var(--gray); margin: 0 0 14px; display: flex; align-items: center; gap: 8px; }
+  .hint svg { width: 15px; height: 15px; color: var(--blue); flex: none; }
+
+  /* ---------- Caution callout (gold) ---------- */
+  .rec.caution { background: var(--tint-gold); border-color: #EBD9B0; border-left-color: var(--gold); }
+  .rec.caution .ic { color: var(--gold); }
+  .rec.caution b { color: #7C5711; }
+  .rec.caution p { color: #5A4A2A; }
+
+  /* ---------- Duo cards (Copilot vs Claude / cost model) ---------- */
+  .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .dcard { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 18px 20px; box-shadow: var(--shadow); }
+  .dcard.accent { border-color: #CFE2EE; border-top: 3px solid var(--blue); }
+  .dcard .tag { font-family: var(--mono); font-size: 11px; letter-spacing: .8px; text-transform: uppercase; color: var(--blue); font-weight: 700; margin: 0 0 6px; }
+  .dcard h3 { margin: 0 0 7px; font-size: 16px; color: var(--navy); }
+  .dcard p { margin: 0; font-size: 13.6px; color: #3A454D; line-height: 1.55; }
+  .duo-cap { font-size: 13px; color: var(--gray); margin: 12px 2px 0; font-style: italic; }
+
+  /* ---------- Cost / scenario table ---------- */
+  .costnote { font-size: 14.5px; color: #35404A; margin: 0 0 16px; max-width: 74ch; }
+  .costnote b { color: var(--navy); }
+  .scenario { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow); }
+  .scenario thead th { background: var(--navy); color: #fff; font-size: 12px; letter-spacing: .4px; text-transform: uppercase; text-align: left; padding: 12px 14px; font-weight: 600; }
+  .scenario tbody td { padding: 13px 14px; font-size: 13.8px; border-top: 1px solid var(--line-soft); color: #3A454D; }
+  .scenario tbody tr:nth-child(even) td { background: var(--tint-gray); }
+  .scenario tbody td.scope { font-weight: 650; color: var(--ink); }
+  .scenario tbody td.allin { color: var(--navy); font-weight: 600; }
+  .scenario-foot { font-size: 12px; color: var(--gray-2); margin: 9px 2px 0; }
+
+  /* ---------- Certifications strip ---------- */
+  .certs { display: flex; flex-wrap: wrap; gap: 9px; margin: 0 0 16px; }
+  .cert {
+    display: inline-flex; align-items: center; gap: 7px; font-size: 12.5px; font-weight: 600; color: var(--navy);
+    background: var(--tint-blue); border: 1px solid #CFE2EE; border-radius: 100px; padding: 7px 13px;
+    cursor: pointer; appearance: none; font-family: var(--sans); transition: background .15s, border-color .15s, box-shadow .15s;
+  }
+  .cert:hover { background: #E1EFF7; }
+  .cert:focus-visible { outline: 2px solid var(--blue-2); outline-offset: 2px; }
+  .cert.prog { background: var(--tint-gold); border-color: #EBD9B0; color: #7C5711; }
+  .cert.prog:hover { background: #F7EBC9; }
+  .cert .cdot { width: 7px; height: 7px; border-radius: 50%; background: #2E9E6B; flex: none; }
+  .cert.prog .cdot { background: var(--gold); }
+  .cert .cchev { width: 11px; height: 11px; margin-left: 1px; transition: transform .2s ease; opacity: .7; }
+  .cert[aria-expanded="true"] { background: var(--navy); color: #fff; border-color: var(--navy); box-shadow: var(--shadow); }
+  .cert[aria-expanded="true"].prog { background: var(--gold); border-color: var(--gold); color: #fff; }
+  .cert[aria-expanded="true"] .cdot { background: #fff; }
+  .cert[aria-expanded="true"] .cchev { transform: rotate(180deg); opacity: 1; }
+
+  .cert-drawer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .28s ease; margin-bottom: 8px; }
+  .cert-drawer.open { grid-template-rows: 1fr; }
+  .cert-drawer-inner { overflow: hidden; }
+  .cert-panel {
+    background: var(--tint-gray); border: 1px solid var(--line-soft); border-left: 3px solid var(--blue);
+    border-radius: var(--r-sm); padding: 14px 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px;
+  }
+  .cert-panel.prog-panel { border-left-color: var(--gold); }
+  .cert-panel h4 { margin: 0 0 4px; font-family: var(--mono); font-size: 11px; letter-spacing: .8px; text-transform: uppercase; color: var(--blue); font-weight: 600; }
+  .cert-panel.prog-panel h4 { color: var(--gold); }
+  .cert-panel p { margin: 0; font-size: 13.6px; color: #38434B; line-height: 1.6; }
+
+  /* ---------- Wide matrix (Claude: 5 tiers) ---------- */
+  .matrix.wide .mhead,
+  .matrix.wide .mgrid { grid-template-columns: minmax(0,1.5fr) repeat(5, minmax(0,0.68fr)) 148px; }
+  .matrix.wide .mhead > .th-tier { text-align: center; }
+  .matrix.wide .mgrid > .cell { text-align: center; justify-content: center; }
+
+  /* ---------- Jira integration matrix (4 col) ---------- */
+  .matrix.jira .mhead,
+  .matrix.jira .mgrid { grid-template-columns: minmax(0,2.4fr) 1.15fr 1.15fr 148px; }
+  .status { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; padding: 4px 11px; border-radius: 100px; white-space: nowrap; }
+  .status .sd { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+  .status.inuse { background: #E7F5EE; color: #1F7A4D; }
+  .status.inuse .sd { background: #2E9E6B; }
+  .status.onboard { background: var(--tint-blue); color: var(--blue); }
+  .status.onboard .sd { background: var(--blue); }
+  .cell.type-cell { color: var(--gray); font-size: 13px; }
+
+  /* ---------- Productivity "wins" cards ---------- */
+  .wins { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 6px; }
+  .win {
+    background: var(--card); border: 1px solid var(--line); border-radius: var(--r);
+    padding: 18px 20px; box-shadow: var(--shadow); border-top: 3px solid var(--blue);
+  }
+  .win .wtag { font-family: var(--mono); font-size: 11px; letter-spacing: .7px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin: 0 0 6px; }
+  .win h3 { margin: 0 0 7px; font-size: 16.5px; color: var(--navy); letter-spacing: -.2px; }
+  .win p { margin: 0; font-size: 13.8px; color: #3A454D; line-height: 1.58; }
+
+  /* ---------- Change-management flow ---------- */
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 4px 0 6px; }
+  .flow-step { background: var(--tint-gray); border: 1px solid var(--line-soft); border-radius: var(--r-sm); padding: 14px 15px; position: relative; }
+  .flow-step .fn { font-family: var(--mono); font-size: 11px; font-weight: 700; color: var(--blue); letter-spacing: .5px; text-transform: uppercase; margin: 0 0 5px; }
+  .flow-step h4 { margin: 0 0 5px; font-size: 14px; color: var(--navy); }
+  .flow-step p { margin: 0; font-size: 12.8px; color: #46525A; line-height: 1.5; }
+  .flow-step:not(:last-child)::after {
+    content: "\2192"; position: absolute; right: -12px; top: 50%; transform: translateY(-50%);
+    color: var(--gold); font-family: var(--mono); font-size: 16px; z-index: 2;
+  }
+
+  /* ---------- Savings highlight ---------- */
+  .save-strip {
+    display: flex; align-items: center; gap: 14px; background: var(--tint-blue);
+    border: 1px solid #CFE2EE; border-left: 4px solid #2E9E6B; border-radius: var(--r-sm);
+    padding: 15px 18px; margin: 14px 0 0;
+  }
+  .save-strip .big { font-family: var(--mono); font-size: 26px; font-weight: 700; color: #1F7A4D; letter-spacing: -1px; flex: none; }
+  .save-strip p { margin: 0; font-size: 13.8px; color: #33424D; }
+  .save-strip b { color: var(--navy); }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 860px) {
+    .learn { grid-template-columns: 1fr; }
+    .prices { grid-template-columns: 1fr; }
+    .maps { grid-template-columns: 1fr; }
+    .duo { grid-template-columns: 1fr; }
+    .cert-panel { grid-template-columns: 1fr; }
+    .wins { grid-template-columns: 1fr; }
+    .flow { grid-template-columns: 1fr; }
+    .flow-step:not(:last-child)::after { content: none; }
+  }
+  @media (max-width: 720px) {
+    .wrap { padding: 0 16px; }
+    h1.title { font-size: 25px; }
+    .mhead { display: none; }
+    .mgrid { grid-template-columns: 1fr; gap: 0; padding: 4px 0 10px; }
+    .matrix.wide .mgrid { grid-template-columns: 1fr; }
+    .matrix.jira .mgrid { grid-template-columns: 1fr; }
+    .mgrid > div { padding: 6px 16px; }
+    .cap { padding-top: 14px !important; }
+    .cell { display: flex; justify-content: space-between; gap: 14px; border-top: 1px solid var(--line-soft); padding-top: 9px !important; padding-bottom: 9px !important; }
+    .matrix.wide .mgrid > .cell { text-align: left; justify-content: space-between; }
+    .cell .cell-label { display: inline; font-weight: 600; color: var(--gray); font-size: 12px; }
+    .cell-ent { border-left: 0; }
+    .exp-wrap { justify-content: flex-start; padding: 4px 16px 12px !important; }
+    .exp-btn { width: 100%; justify-content: center; }
+    .maprow .to { text-align: left; }
+    .maprow { grid-template-columns: 1fr; gap: 4px; }
+    .maprow .arw { display: none; }
+    .scenario { display: block; overflow-x: auto; white-space: nowrap; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div class="brand">
+        <img class="brand-mark" alt="Northeast Bank" src="data:image/png;base64,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" />
+        <div class="brand-text">
+          <b>Northeast Bank</b>
+          <span>Technology Consolidation Tracker</span>
+        </div>
+      </div>
+      <div class="classif">CONFIDENTIAL — INTERNAL USE ONLY</div>
+    </div>
+  </header>
+
+  <nav class="tabbar">
+    <div class="tabs" role="tablist" aria-label="Vendor evaluations">
+      <button class="tab" role="tab" aria-selected="true" data-status="ready" data-tab="github" id="tab-github">
+        <span class="dot"></span> GitHub
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-status="ready" data-tab="claude" id="tab-claude">
+        <span class="dot"></span> Claude Enterprise
+      </button>
+      <button class="tab" role="tab" aria-selected="false" data-status="ready" data-tab="jira" id="tab-jira">
+        <span class="dot"></span> Jira + Confluence
+      </button>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <!-- ============ GITHUB ============ -->
+    <section class="panel active" id="panel-github" role="tabpanel" aria-labelledby="tab-github">
+      <p class="eyebrow">Source control &amp; DevOps platform</p>
+      <h1 class="title">GitHub — Free vs. Team vs. Enterprise</h1>
+      <p class="lede">One subscription that can replace eight separate AWS DevOps line items — and become shared, versioned tooling for every engineering team in the bank, not just Software and Data.</p>
+
+      <div class="rec">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        <p><b>Recommendation:</b> Adopt <b>GitHub Enterprise Cloud</b>. It is the only tier where a regulated bank's controls — enforced code review, centralized identity through Entra, and an exportable audit trail — actually exist. Free and Team leave gaps an examiner would flag. Select <b>Learn More</b> on any row below to see why.</p>
+      </div>
+
+      <div class="sec-head">
+        <h2>Plans at a glance</h2>
+        <p>All tiers include unlimited public and private repositories. The tiers differ on governance, not project count.</p>
+      </div>
+      <div class="prices">
+        <div class="pcard">
+          <h3>Free</h3>
+          <div class="sub">The basics for individuals and small groups.</div>
+          <div class="price">$0<small> /user/mo</small></div>
+          <div class="note">Community support · 2,000 CI/CD min/mo</div>
+        </div>
+        <div class="pcard">
+          <h3>Team</h3>
+          <div class="sub">Collaboration controls for growing teams.</div>
+          <div class="price">$4<small> /user/mo</small></div>
+          <div class="note">Web support · 3,000 CI/CD min/mo</div>
+        </div>
+        <div class="pcard rec-card">
+          <span class="ribbon">Recommended</span>
+          <h3>Enterprise</h3>
+          <div class="sub">Security, compliance &amp; centralized governance.</div>
+          <div class="price">$21<small> /user/mo</small></div>
+          <div class="note">SSO/SCIM · audit log · 50,000 CI/CD min/mo</div>
+        </div>
+      </div>
+
+      <div class="sec-head">
+        <h2>What one GitHub subscription replaces</h2>
+        <p>The eight AWS DevOps services currently under evaluation, mapped to their GitHub equivalent.</p>
+      </div>
+      <div class="maps" id="maps"></div>
+
+      <div class="sec-head">
+        <h2>Capability &amp; tier comparison</h2>
+        <p>How each capability is set across the three tiers — and what each one means.</p>
+      </div>
+      <p class="hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>
+        Select <strong>Learn More</strong> on any row to learn what it is and why the tiers are set the way they are.
+      </p>
+
+      <div class="matrix">
+        <div class="mhead">
+          <div>Capability</div>
+          <div>Free</div>
+          <div>Team</div>
+          <div class="ent-h">Enterprise</div>
+          <div></div>
+        </div>
+        <div id="rows"></div>
+      </div>
+
+      <p class="foot">
+        <b>Sources:</b> github.com/pricing (full feature comparison), docs.github.com. Prices are publicly listed figures as of July 2026 and are indicative only; Enterprise seat minimums (often ~50) and volume discounts are subject to a vendor quote. Companion documents: <b>GitHub Enterprise vs. AWS CodeCommit</b> and <b>GitHub Plans Research Brief</b>.
+      </p>
+    </section>
+
+    <!-- ============ CLAUDE ============ -->
+    <section class="panel" id="panel-claude" role="tabpanel" aria-labelledby="tab-claude">
+      <p class="eyebrow">Governed AI coding assistance</p>
+      <h1 class="title">Claude Enterprise</h1>
+      <p class="lede">A bank-approved AI coding assistant for the technology organization, with Claude Code as the primary use case — deployed through Entra ID with full audit logging. Complementary to Microsoft Copilot, not a replacement.</p>
+
+      <div class="rec">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        <p><b>Recommendation:</b> Adopt <b>Claude Enterprise</b> for the technology organization's power users, with Claude Code (and its VS Code extension) as the primary use case. Deploy under SSO and automated provisioning through Entra ID, with audit activity exported to a write-once (WORM) archive. Enterprise is the only Claude tier that clears the governance bar for an FDIC-insured institution — every lower tier fails at least one hard requirement.</p>
+      </div>
+
+      <div class="rec caution">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+        <p><b>One item to flag:</b> disable <b>Claude Cowork</b> at launch (or scope it to a small group). Cowork session activity is currently excluded from Anthropic's audit logs, Compliance API, and data exports on every tier, and its history is stored on the local device — which conflicts with our audit and retention requirements. Our primary use case, Claude Code, is fully covered by audit logging, so this costs us nothing today.</p>
+      </div>
+
+      <div class="sec-head">
+        <h2>Why not just Microsoft Copilot?</h2>
+        <p>This is a right-tool-for-the-job decision, not a verdict on Microsoft. The two are complementary.</p>
+      </div>
+      <div class="duo">
+        <div class="dcard">
+          <p class="tag">Firm-wide default</p>
+          <h3>Microsoft 365 Copilot</h3>
+          <p>The right regulated assistant for everyone: drafting, summarizing, analyzing documents, and working inside Office and Teams. This decision does not replace it — Copilot should be the assistant in front of all end users.</p>
+        </div>
+        <div class="dcard accent">
+          <p class="tag">Coding specialist</p>
+          <h3>Claude Code</h3>
+          <p>An agent that takes a whole task: navigate a repository, read and edit across many files, run commands and tests under explicit permission — from the terminal, VS Code, or desktop. That whole-task capability is what a general chat assistant or autocomplete tool does not provide.</p>
+        </div>
+      </div>
+      <p class="duo-cap">Copilot for everyone; Claude for the people who build and secure our software.</p>
+
+      <div class="sec-head">
+        <h2>Why only Enterprise qualifies</h2>
+        <p>Anthropic offers five tiers. Mapped against the controls a regulated bank requires, only Enterprise clears every row.</p>
+      </div>
+      <p class="hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>
+        Select <strong>Learn More</strong> on any row to see what the control is, why it matters, and where the lower tiers fall short.
+      </p>
+      <div class="matrix wide">
+        <div class="mhead">
+          <div>Requirement</div>
+          <div class="th-tier">Free</div>
+          <div class="th-tier">Pro</div>
+          <div class="th-tier">Max</div>
+          <div class="th-tier">Team</div>
+          <div class="th-tier ent-h">Enterprise</div>
+          <div></div>
+        </div>
+        <div id="rows-claude"></div>
+      </div>
+      <p class="scenario-foot">* Team supports basic Google/Microsoft sign-in only, not enforced SAML/SCIM. &nbsp; ** On consumer tiers, data may be used to improve models if a user opts in, with retention up to several years.</p>
+
+      <div class="sec-head">
+        <h2>What it costs</h2>
+        <p>Two parts: a flat per-seat access fee, plus token usage billed on top at standard API rates.</p>
+      </div>
+      <p class="costnote">Confirmed: Anthropic requires a minimum of <b>20 Enterprise seats</b> — this is a hard floor, not a starting recommendation, so a "developers only" or "builders only" seat count below 20 isn't purchasable at Enterprise. The seat fee is about <b>$20 / user / month</b> (billed annually) — <b>~$4,800/year for 20 seats</b> — and covers platform access only. There's no included token allowance and no per-seat usage cap; every token used in chat, Claude Code, or Cowork bills separately at standard API rates, with admin-configurable spend limits per user and per group for predictability.</p>
+
+      <div class="sec-head">
+        <h2>Token pricing by model</h2>
+        <p>What Anthropic actually charges per million tokens — this is the number usage bills are built from.</p>
+      </div>
+      <table class="scenario">
+        <thead>
+          <tr><th>Model</th><th>Input / MTok</th><th>Output / MTok</th><th>Cache read / MTok</th><th>Best for</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="scope">Claude Opus 4.8</td><td>$5.00</td><td>$25.00</td><td>$0.50</td><td>Hardest reasoning, large agentic coding sessions, crunch-season heavy lifting</td></tr>
+          <tr><td class="scope">Claude Sonnet 5 <span style="font-weight:400;color:var(--gray)">(intro, through Aug 31 '26)</span></td><td>$2.00</td><td>$10.00</td><td>$0.20</td><td>Default day-to-day coding &amp; chat — best price-to-quality ratio</td></tr>
+          <tr><td class="scope">Claude Sonnet 5 <span style="font-weight:400;color:var(--gray)">(standard, from Sep 1 '26)</span></td><td>$3.00</td><td>$15.00</td><td>$0.30</td><td>Same model; pricing reverts after the introductory window</td></tr>
+          <tr><td class="scope">Claude Haiku 4.5</td><td>$1.00</td><td>$5.00</td><td>$0.10</td><td>Lightweight Q&amp;A, quick lookups, simple edits</td></tr>
+        </tbody>
+      </table>
+      <p class="scenario-foot">Output tokens consistently cost 5x input tokens across the lineup. Cache reads (repeated context, like a codebase or system prompt already sent) cost 10% of the base input rate. Batch (non-interactive) jobs get a flat 50% discount on both input and output. <b>Note:</b> Sonnet 5's $2/$10 pricing is introductory and reverts to $3/$15 on September 1, 2026 — worth re-checking this budget after that date. Source: platform.claude.com/docs (Anthropic official pricing).</p>
+
+      <div class="sec-head">
+        <h2>What a developer's day actually costs</h2>
+        <p>Modeled scenarios, not measured history — built from Anthropic's published token math and reported usage benchmarks, so we can budget crunch season realistically.</p>
+      </div>
+      <table class="scenario">
+        <thead>
+          <tr><th>Workload</th><th>What it looks like</th><th>Model mix</th><th>Per developer / day</th><th>Per developer / month*</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="scope">Heavy (crunch)</td>
+            <td>Opus 4.8 running near-continuously — large agentic coding sessions, multi-file refactors, heavy tool/subagent use most of the day</td>
+            <td>~100% Opus 4.8</td>
+            <td class="allin">~$50 – $60</td>
+            <td class="allin">~$1,100 – $1,300</td>
+          </tr>
+          <tr>
+            <td class="scope">Medium (normal)</td>
+            <td>Typical day: Sonnet 5 for most coding and chat, Opus 4.8 called in for the occasional hard problem</td>
+            <td>~80% Sonnet 5 / 20% Opus 4.8</td>
+            <td class="allin">~$9 – $11</td>
+            <td class="allin">~$200 – $240</td>
+          </tr>
+          <tr>
+            <td class="scope">Light (slow day)</td>
+            <td>Light Q&amp;A, small edits, quick lookups — Claude open but not driving heavy agent work</td>
+            <td>~Sonnet 5, some Haiku 4.5</td>
+            <td class="allin">~$2 – $3</td>
+            <td class="allin">~$45 – $55</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="scenario-foot">* Monthly figures assume 22 working days at that pace continuously — in practice a developer's month is a mix of all three. Modeled from representative token volumes (heavy: ~18M input / ~1M output tokens per day at ~75% cache-hit rate; medium: ~6M input / ~350K output at ~65% cache-hit; light: ~1.2M input / ~80K output at ~50% cache-hit) priced at the official rates above. For comparison, Anthropic reports a median Claude Code cost of about $13 per developer per <i>active</i> day across all its customers, with 90% of users under $30/day — our "medium" scenario sits above that median because our profile assumes daily, sustained coding use rather than occasional use.</p>
+
+      <div class="sec-head">
+        <h2>Budgeting the 20-seat deployment</h2>
+        <p>What the org-wide monthly bill looks like if the whole team ran at one pace for a full month — the real number will land between Medium and Heavy depending on how much of the month is crunch.</p>
+      </div>
+      <table class="scenario">
+        <thead>
+          <tr><th>If the whole team ran at this pace all month</th><th>Usage / month (20 devs)</th><th>+ Seat fee</th><th>Total / month</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="scope">Light pace</td><td>~$900 – $1,100</td><td>$400</td><td class="allin">~$1,300 – $1,500</td></tr>
+          <tr><td class="scope">Medium pace</td><td>~$4,000 – $4,800</td><td>$400</td><td class="allin">~$4,400 – $5,200</td></tr>
+          <tr><td class="scope">Heavy / crunch pace</td><td>~$22,000 – $26,000</td><td>$400</td><td class="allin">~$22,400 – $26,400</td></tr>
+        </tbody>
+      </table>
+      <p class="scenario-foot">These are bounding scenarios, not a forecast — no real deployment runs at one pace for 30 straight days. Use Medium as the realistic monthly baseline and Heavy as the ceiling to budget against for crunch months. Hard per-user and per-org spend caps (set in the Enterprise admin console) are the practical guardrail against the Heavy scenario becoming the actual bill; recommend reviewing real usage data after a 90-day pilot before committing to a full-year budget.</p>
+
+      <div class="sec-head">
+        <h2>Certifications &amp; data handling</h2>
+        <p>The attestations and commitments vendor risk and legal will review. Select any certification to see what it is and why it matters to us.</p>
+      </div>
+      <div class="certs" id="certs"></div>
+      <div id="cert-panels"></div>
+      <p class="costnote">On Enterprise, prompts and outputs are <b>not used to train Anthropic's models</b> — a contractual commitment in the agreement, not merely a product toggle. Retention is configurable, Zero Data Retention is available under commercial terms, and US/EU data residency can be set at the agreement stage. Reports and the current sub-processor list are available to our vendor-risk team at trust.anthropic.com. Identity runs entirely through Entra (SAML 2.0 / OIDC + SCIM); audit activity streams to our SIEM (Rapid7) and into a WORM archive to satisfy the seven-year retention obligation.</p>
+
+      <p class="foot">
+        <b>Sources:</b> platform.claude.com/docs (official token pricing), support.claude.com (seat minimums &amp; plan structure), anthropic.com/product/enterprise, privacy.claude.com / trust.anthropic.com. Prices are publicly listed figures as of July 2026 and are indicative only; workload scenarios are modeled estimates, not measured usage. Final pricing, volume discounts, and contract terms are subject to a vendor quote. Companion document: <b>Claude Enterprise — Decision Brief</b>.
+      </p>
+    </section>
+
+    <!-- ============ JIRA ============ -->
+    <section class="panel" id="panel-jira" role="tabpanel" aria-labelledby="tab-jira">
+      <p class="eyebrow">Work management, ticketing &amp; knowledge base</p>
+      <h1 class="title">Jira Service Management + Confluence</h1>
+      <p class="lede">The replacement for BMC Track-It! — but the real story is bigger. JSM is a centralization hub that connects the tools we already run, drives work automatically, and automates the manual ticketing and reporting the team handles today.</p>
+
+      <div class="rec">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        <p><b>Recommendation:</b> Adopt <b>JSM Premium + Confluence</b> as a phased pilot, starting with the IT Help Desk and expanding to InfoSec, Facilities, and HR. It replaces an aging on-prem system at a <b>lower annual cost</b>, and it's the connective tissue that ties the GitHub and Claude decisions together — one place where code changes, security alerts, and service requests all become trackable, auditable work. Select <b>Learn More</b> on any integration below to see how it plugs into our stack.</p>
+      </div>
+
+      <div class="sec-head">
+        <h2>Why this is a productivity multiplier</h2>
+        <p>This is not simply a more modern ticketing system; it removes the manual work that slows the team down today.</p>
+      </div>
+      <div class="wins">
+        <div class="win">
+          <p class="wtag">Auto-created</p>
+          <h3>Tickets are created automatically</h3>
+          <p>Alerts from Defender, Rapid7, and Proofpoint open tickets automatically; a GitHub pull request can open and update its own ticket; portal requests are routed automatically by category, priority, and location. The queue populates on its own, freeing technicians to triage and resolve rather than manually log tickets.</p>
+        </div>
+        <div class="win">
+          <p class="wtag">Always documented</p>
+          <h3>Every change is documented as it happens</h3>
+          <p>The moment a change is raised, JSM captures who, what, when, the approvals, and the risk level in one ITIL-aligned record. Nothing ships undocumented, and the audit trail is built continuously as work happens rather than reconstructed ahead of an examination.</p>
+        </div>
+        <div class="win">
+          <p class="wtag">Assembled for you</p>
+          <h3>Change Management packets compile automatically</h3>
+          <p>The weekly CAB packet — pending changes, approvals, risk ratings, and post-implementation reviews — is generated from the system of record rather than compiled manually in a separate document. The meeting begins from live data.</p>
+        </div>
+        <div class="win">
+          <p class="wtag">Deflected</p>
+          <h3>Routine requests resolve through self-service</h3>
+          <p>A modern self-service portal backed by a Confluence knowledge base resolves the repeat requests — password resets, access provisioning, how-tos — before they reach a technician. First-call resolution improves while the manual queue shrinks.</p>
+        </div>
+      </div>
+
+      <div class="sec-head">
+        <h2>Change Management, automated end to end</h2>
+        <p>Where the manual overhead is heaviest today — and where JSM removes the most work.</p>
+      </div>
+      <div class="rec">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+        <p>The weekly Change Management meeting stops being a manual assembly job. Every change raised in JSM carries its approvals, risk assessment, and post-implementation review with it — so the CAB review and the monthly ISC report are generated from live records rather than rebuilt by hand each week.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-step">
+          <p class="fn">1 · Raise</p>
+          <h4>Auto-routed</h4>
+          <p>A change is logged — or opened automatically from a GitHub merge or a monitoring alert — and routed into the ITIL change workflow with the right approvers attached.</p>
+        </div>
+        <div class="flow-step">
+          <p class="fn">2 · Approve</p>
+          <h4>Risk-scored</h4>
+          <p>Configurable approval chains and risk-assessment templates aligned to NEB standards capture sign-off and risk level automatically.</p>
+        </div>
+        <div class="flow-step">
+          <p class="fn">3 · Review</p>
+          <h4>Documented</h4>
+          <p>Post-implementation reviews are tracked in Confluence and linked back to the change, so the record completes itself without extra data entry.</p>
+        </div>
+        <div class="flow-step">
+          <p class="fn">4 · Report</p>
+          <h4>Assembled</h4>
+          <p>The weekly CAB packet and monthly ISC reporting pull straight from these records — with NIST SP 800-53 control mapping already attached.</p>
+        </div>
+      </div>
+
+      <div class="sec-head">
+        <h2>Works with the tools we already run — and the ones we're onboarding</h2>
+        <p>JSM's value is the integrations. Here's how it plugs into the Northeast Bank stack. Select Learn More on any row.</p>
+      </div>
+      <p class="hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/></svg>
+        <span class="status inuse" style="margin-right:4px"><span class="sd"></span>In our stack</span> = already deployed at NEB &nbsp;·&nbsp; <span class="status onboard" style="margin:0 4px"><span class="sd"></span>Onboarding</span> = arriving with this consolidation effort
+      </p>
+      <div class="matrix jira">
+        <div class="mhead">
+          <div>Tool</div>
+          <div>Type</div>
+          <div>Status at NEB</div>
+          <div></div>
+        </div>
+        <div id="rows-jira"></div>
+      </div>
+      <p class="scenario-foot">Plus <b>1,000+ Atlassian Marketplace apps</b> (SIEM, SOAR, and more) via a modern open API — every integration supports RBAC and audit logging for regulatory compliance, so the stack stays future-proof.</p>
+
+      <div class="sec-head">
+        <h2>One platform, every department</h2>
+        <p>Like the GitHub case, this isn't just a tech-team tool — it's a single pane of glass that reduces tool sprawl bank-wide.</p>
+      </div>
+      <table class="scenario">
+        <thead>
+          <tr><th>Department</th><th>Current tool</th><th>Proposed JSM desk</th><th>Key benefit</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="scope">IT</td><td>Track-It!</td><td>IT Service Desk</td><td>Cloud-native ITSM, automation, AIOps</td></tr>
+          <tr><td class="scope">InfoSec</td><td>Track-It! / Email / Teams</td><td>Security Operations Desk</td><td>Incident response &amp; access-request automation</td></tr>
+          <tr><td class="scope">Facilities</td><td>Track-It!</td><td>Facilities Service Desk</td><td>Centralized work orders, SLA tracking</td></tr>
+          <tr><td class="scope">HR</td><td>Email / Track-It! / LAN forms</td><td>HR Service Desk</td><td>Automated onboarding, confidential case mgmt</td></tr>
+          <tr><td class="scope">Retail Ops</td><td>Email / Phone / Teams</td><td>Retail Operations Desk</td><td>Branch issue tracking, escalation workflows</td></tr>
+          <tr><td class="scope">Marketing</td><td>Email</td><td>Marketing Intake Desk</td><td>Project intake, approval workflows</td></tr>
+        </tbody>
+      </table>
+
+      <div class="sec-head">
+        <h2>Confluence: the knowledge layer</h2>
+        <p>The other half of the Atlassian pair — and where GitHub ties back in.</p>
+      </div>
+      <p class="costnote">Confluence is the durable knowledge base behind the self-service portal: runbooks, architecture decisions, onboarding docs, and the post-implementation reviews that link back to change records. It's what drives first-call resolution and portal deflection — answers written once and reused everywhere. And via docs-as-code, documentation kept as Markdown in a GitHub repo can auto-publish into Confluence, so the same pull-request workflow engineers use for code keeps our knowledge base current without separate effort. Together, JSM and Confluence turn day-to-day tickets and changes into reusable institutional memory.</p>
+
+      <div class="sec-head">
+        <h2>What it costs</h2>
+        <p>Per-agent, cloud-hosted — and it comes in under the current on-prem bill.</p>
+      </div>
+      <table class="scenario">
+        <thead>
+          <tr><th>Tier</th><th>Price (25 agents)</th><th>What you get</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="scope">Free</td><td>$0</td><td>Up to 3 agents; basic ITSM templates; self-service portal; alerts &amp; on-call; 2 GB storage</td></tr>
+          <tr><td class="scope">Standard</td><td>~$6,700/yr</td><td>Custom-branded help center; audit logs; 250 GB storage; unlimited end-user support</td></tr>
+          <tr><td class="scope" style="color:var(--navy)">Premium <span style="font-weight:400;color:var(--gold)">— Proposed</span></td><td class="allin">~$14,650/yr</td><td>AIOps &amp; AI features; asset management; advanced change management; 99.9% uptime SLA; unlimited storage</td></tr>
+          <tr><td class="scope">Enterprise</td><td>Custom</td><td>Atlassian Analytics, Data Lake, multi-site, 99.95% SLA, Guard Premium — <i>201+ agents only</i></td></tr>
+        </tbody>
+      </table>
+      <p class="scenario-foot">Premium figure includes ~$1,050 for 25 Atlassian Guard Standard licenses. Per-agent pricing; scaling discounts available. Premium is the proposed plan because AIOps, asset management, and advanced change management are the features this whole case depends on.</p>
+
+      <div class="sec-head">
+        <h2>Track-It! vs JSM: the head-to-head</h2>
+        <p>Current on-prem cost against the cloud-native replacement.</p>
+      </div>
+      <table class="scenario">
+        <thead>
+          <tr><th>Cost item</th><th>Track-It! (annual)</th><th>JSM (25 agents)</th><th>JSM (50 agents)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="scope">Server / infrastructure</td><td>$13,500.00</td><td>$0.00 <span style="color:var(--gray)">(cloud-hosted)</span></td><td>$0.00 <span style="color:var(--gray)">(cloud-hosted)</span></td></tr>
+          <tr><td class="scope">Software licensing</td><td>$9,616.94</td><td>$13,600.00</td><td>$26,000.00</td></tr>
+          <tr><td class="scope">Security / identity</td><td>$0.00</td><td>$1,050.00 <span style="color:var(--gray)">(Guard)</span></td><td>$2,100.00 <span style="color:var(--gray)">(Guard)</span></td></tr>
+          <tr><td class="scope" style="color:var(--navy)">Total annual</td><td style="font-weight:700;color:var(--ink)">$23,116.94</td><td class="allin">$14,650.00</td><td class="allin">$28,100.00</td></tr>
+        </tbody>
+      </table>
+      <div class="save-strip">
+        <span class="big">$8,467</span>
+        <p><b>Annual savings at 25 agents</b> versus Track-It! — while eliminating on-prem server maintenance on NEBTRACKIT01 / NEBSQL02 and <i>gaining</i> cloud-native automation, AIOps, and modern integrations. The savings narrow and then reverse as agent count grows, so seat count is the number to right-size at quote.</p>
+      </div>
+
+      <div class="sec-head">
+        <h2>Feature comparison</h2>
+        <p>Independent scores (G2 Q1 2026, Gartner Peer Insights, TrustRadius).</p>
+      </div>
+      <table class="scenario">
+        <thead>
+          <tr><th>Feature</th><th>Track-It!</th><th>Jira Service Management</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="scope">Deployment</td><td>On-premises</td><td class="allin">Cloud</td></tr>
+          <tr><td class="scope">Change Management</td><td>6.9 / 10</td><td class="allin">9.0 / 10</td></tr>
+          <tr><td class="scope">Knowledge Base</td><td>6.5 / 10</td><td class="allin">8.3 / 10</td></tr>
+          <tr><td class="scope">Reporting &amp; Analytics</td><td>7.5 / 10</td><td class="allin">9.1 / 10</td></tr>
+          <tr><td class="scope">Ticketing</td><td>8.9 / 10</td><td class="allin">9.1 / 10</td></tr>
+          <tr><td class="scope">Automation</td><td>Basic</td><td class="allin">Advanced (workflow rules, AI)</td></tr>
+          <tr><td class="scope">Self-service portal</td><td>Basic</td><td class="allin">Advanced (customizable)</td></tr>
+          <tr><td class="scope">Integrations</td><td>Limited</td><td class="allin">1,000+ marketplace apps</td></tr>
+          <tr><td class="scope">Mobile app</td><td>No</td><td class="allin">Yes</td></tr>
+          <tr><td class="scope">ITIL certified</td><td>No</td><td class="allin">Yes</td></tr>
+        </tbody>
+      </table>
+
+      <div class="rec caution">
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+        <p><b>Considerations to plan for:</b> a learning curve and staff retraining; careful legacy data migration from Track-It!; per-agent cost that scales with seats; and reconfiguring current workflows (LAN forms, change management) rather than lifting them over as-is. None are disqualifying, but they are why the recommendation is a <b>phased pilot</b> rather than a single-step cutover.</p>
+      </div>
+
+      <div class="sec-head">
+        <h2>Phased rollout</h2>
+        <p>A staged plan that proves value on the IT desk before expanding — dependent on the RFP moving swiftly.</p>
+      </div>
+      <table class="scenario">
+        <thead>
+          <tr><th>Phase</th><th>Focus</th><th>Window*</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="scope">Phase 0</td><td>RFP &amp; stakeholder input across departments</td><td>Weeks 1–6</td></tr>
+          <tr><td class="scope">Phase 1</td><td>Procurement, planning &amp; cloud setup</td><td>Week 6</td></tr>
+          <tr><td class="scope">Phase 2</td><td>IT team migration (help desk, change mgmt, KB)</td><td>Weeks 7–13</td></tr>
+          <tr><td class="scope">Phase 3</td><td>InfoSec integration (Defender, Proofpoint, Intune, Rapid7)</td><td>Weeks 7–13</td></tr>
+          <tr><td class="scope">Phase 4</td><td>Cross-department rollout &amp; portal launch</td><td>Weeks 14–18</td></tr>
+          <tr><td class="scope">Phase 5</td><td>Go-live, Track-It! decommission &amp; optimization</td><td>Weeks 18–20</td></tr>
+        </tbody>
+      </table>
+      <p class="scenario-foot">* Original estimate ~20 weeks total; the working timeline is currently <b>TBD pending leadership input</b> on scope and RFP timing. Recommended first move: engage Atlassian for bank pricing and an IT demo, and run Phase 0 stakeholder gathering in parallel.</p>
+
+      <p class="foot">
+        <b>Source:</b> Northeast Bank <b>JSM Pitch Deck</b> (April 2026, L. Ladakakos, Information Security) — pricing, integration, and scoring figures are NEB's internal calculations and vendor-comparison data (G2 Grid Reports Q1 2026, Gartner Peer Insights, TrustRadius, NEB infrastructure costs, Atlassian pricing pages). Figures are indicative; final pricing and agent count are subject to a vendor quote and the RFP process. Companion documents: <b>GitHub Plans Research Brief</b>, <b>Claude Enterprise Decision Brief</b>.
+      </p>
+    </section>
+
+  </main>
+
+<script>
+  /* ---------- Data: AWS → GitHub mapping ---------- */
+  const REPLACES = [
+    ["DevOps: Code Repo", "Repositories (Git hosting)"],
+    ["DevOps: Build", "GitHub Actions"],
+    ["DevOps: Artifact Repo", "GitHub Packages"],
+    ["DevOps: Deploy", "Actions — environments &amp; deployments"],
+    ["DevOps: Code Quality", "Actions + code scanning"],
+    ["DevOps: SAST", "Advanced Security (CodeQL)"],
+    ["DevOps: Pipeline Orchestration", "Actions workflows"],
+    ["DevOps: Code Coverage", "Actions — coverage on every PR"],
+  ];
+
+  /* ---------- Data: capabilities ---------- */
+  /* cell types: 'text' | 'good' | 'no' | 'na' */
+  const CAPS = [
+    {
+      name: "Repositories & collaborators",
+      micro: "The versioned home for every project's files and history.",
+      free: "Unlimited",
+      team: "Unlimited",
+      ent: "Unlimited, org-scale governance",
+      whatIs: "A repository (\u201Crepo\u201D) is the versioned home for one project's files \u2014 code, scripts, configs \u2014 plus the full history of every change and who made it. Collaborators are the people you grant access. The underlying technology, Git, lets many people work on the same files without overwriting each other.",
+      whyTiers: "All three tiers give unlimited public and private repos \u2014 GitHub doesn't meter the number of projects. What changes higher up is how access to private repos is governed: Free is ad-hoc individual sharing; Team and Enterprise charge per seat because access is managed centrally at the organization level.",
+      bank: "Unlimited private repos means every team's scripts and tools can live in source control without a project cap \u2014 the foundation for the cross-team adoption case."
+    },
+    {
+      name: "Branch / repo protection",
+      micro: "Rules that stop unreviewed code from reaching the official version.",
+      free: {t:"no", v:"Public repos only"},
+      team: {t:"good", v:"Required reviews, code owners"},
+      ent: {t:"good", v:"Enforced org-wide + rule insights"},
+      whatIs: "A \u201Cbranch\u201D is a working copy of the code where changes are made before they merge into the official version (usually \u201Cmain\u201D). Branch protection is a rule that changes can't reach main until conditions are met \u2014 e.g. someone else reviewed them, or automated tests passed.",
+      whyTiers: "On Free these rules only work on public repositories \u2014 on a private repo, anyone with access can merge unreviewed. Team and Enterprise enforce required reviewers, code owners, and repository rules on private repos. Enterprise applies them across every repo at once and previews a rule's impact before you enable it.",
+      bank: "This is the enforceable change-control baseline examiners expect \u2014 a documented second set of eyes on every change before it ships. Free and Team leave that gap on private repos, which is where all our real code lives."
+    },
+    {
+      name: "CI/CD build minutes (Actions)",
+      micro: "Automation that builds, tests, and deploys on every change.",
+      free: "2,000 min/mo",
+      team: "3,000 min/mo",
+      ent: "50,000 min/mo",
+      whatIs: "CI/CD stands for Continuous Integration / Continuous Delivery \u2014 automation that runs every time code changes: it builds the software, runs the tests, checks quality, and can deploy the result, with no one doing it by hand. GitHub's built-in engine for this is called Actions. You write the steps once; GitHub runs them on its own servers whenever triggered.",
+      whyTiers: "Every Actions run uses one of GitHub's cloud machines for as long as the job takes \u2014 a quick test might be 2 minutes, a full build-test-deploy run 10\u201315. GitHub bills that compute time in minutes, because that's the actual cost being consumed. Each tier includes a monthly allowance (2,000 / 3,000 / 50,000); past that you pay per minute, and runs on public repos are free.",
+      bank: "A team making several pull requests a day can burn 1,000\u20133,000 minutes/month before deploys or coverage even enter the picture. Free and Team are sized for a light, static workload; Enterprise's 50,000 absorbs real usage without surprise overage \u2014 which matters when we don't yet know how build-heavy future projects are."
+    },
+    {
+      name: "Packages storage (Artifact repo)",
+      micro: "Governed storage for finished build outputs.",
+      free: "500 MB",
+      team: "2 GB",
+      ent: "50 GB",
+      whatIs: "When automation builds software, the finished pieces \u2014 libraries, container images, packaged tools \u2014 are \u201Cartifacts.\u201D A package registry is the shared, versioned storage those live in, so other projects and deployments pull a specific known-good version instead of rebuilding from scratch. GitHub Packages is that registry.",
+      whyTiers: "Storage is metered like any cloud storage: Free 500 MB, Team 2 GB, Enterprise 50 GB, with public-repo hosting free. More headroom higher up reflects that larger organizations produce and retain more build outputs.",
+      bank: "This is the \u201CArtifact Repo\u201D line in the AWS stack. A governed, versioned home for build outputs is also a supply-chain control \u2014 you deploy the exact artifact you tested, not a fresh rebuild."
+    },
+    {
+      name: "Identity & access (SSO / SCIM)",
+      micro: "Sign in and provision access through Entra ID.",
+      free: {t:"no", v:"Standalone accounts"},
+      team: {t:"no", v:"Standalone accounts"},
+      ent: {t:"good", v:"SAML SSO + SCIM + Managed Users"},
+      whatIs: "Single Sign-On (SSO) lets people sign in to GitHub with their existing bank credentials through Entra ID, instead of a separate GitHub login. SCIM is the automation behind it: join, move, or leave in Entra, and GitHub access is created, changed, or removed automatically. Enterprise Managed Users (EMU) goes further \u2014 the bank owns the GitHub accounts outright through Entra.",
+      whyTiers: "Free and Team use standalone GitHub accounts you manage by hand. SSO, SCIM, and EMU are Enterprise-only, because centralized identity governance is the capability large, regulated organizations are actually buying at that tier.",
+      bank: "This closes the joiner / mover / leaver gap auditors test directly \u2014 access is granted and revoked from one directory, not a separate GitHub user list that drifts out of sync. It's the same identity model we're recommending for Claude, so it stays one consistent approach."
+    },
+    {
+      name: "Audit logging",
+      micro: "Tamper-evident record of who did what, exportable to the SIEM.",
+      free: {t:"no", v:"None"},
+      team: {t:"no", v:"None"},
+      ent: {t:"good", v:"Advanced log + Audit Log API"},
+      whatIs: "An audit log is the record of who did what and when \u2014 who changed a setting, merged code, or was granted access. The Audit Log API lets you export that record automatically into the bank's security monitoring (SIEM) and long-term archive.",
+      whyTiers: "There's no audit log on Free or Team. The advanced log and its API are Enterprise-only, because retained, exportable activity evidence is a compliance capability, not a developer convenience.",
+      bank: "This is usually the first artifact an examiner asks to see. Exporting to a write-once (WORM) archive is how we meet the bank's seven-year retention obligation."
+    },
+    {
+      name: "IP allow-listing",
+      micro: "Restrict access to known bank networks.",
+      free: {t:"no", v:"No"},
+      team: {t:"no", v:"No"},
+      ent: {t:"good", v:"Yes (Enterprise Cloud)"},
+      whatIs: "A rule that restricts access to GitHub to a known list of network addresses \u2014 for example, only from the bank's offices or VPN \u2014 so the platform can't be reached from arbitrary locations.",
+      whyTiers: "Enterprise Cloud only. It's a network-security control aimed squarely at regulated organizations.",
+      bank: "Adds a network boundary on top of identity: even valid credentials can't be used from an unapproved location."
+    },
+    {
+      name: "Data residency",
+      micro: "Choose the Azure region where data rests.",
+      free: {t:"no", v:"No"},
+      team: {t:"no", v:"No"},
+      ent: {t:"good", v:"Choose Azure region"},
+      whatIs: "Control over the geographic region where your data is physically stored at rest. GitHub Enterprise Cloud runs on Microsoft Azure and lets you choose the region.",
+      whyTiers: "Enterprise-only, because data-residency control is a regulated-industry requirement rather than a general feature.",
+      bank: "Relevant if we make data-location commitments to regulators or customers \u2014 and it keeps source code inside the same Azure trust boundary as our O365 estate."
+    },
+    {
+      name: "Compliance attestations",
+      micro: "Independent proof the controls are real.",
+      free: {t:"na", v:"N/A"},
+      team: {t:"na", v:"N/A"},
+      ent: {t:"good", v:"SOC 1/2 Type 2, FedRAMP"},
+      whatIs: "Independent audit reports proving GitHub operates the security controls it claims. SOC 1 / SOC 2 Type 2 are the standard financial-industry attestations; FedRAMP Tailored is a US-government cloud-security authorization.",
+      whyTiers: "These attestations describe the governed Enterprise Cloud service \u2014 they're what Risk and Legal review before approving any vendor that will hold our source code and secrets.",
+      bank: "Marked N/A at Free and Team because those aren't the enterprise service the reports cover. For vendor-risk sign-off, this row is effectively mandatory."
+    },
+    {
+      name: "Security scanning (Advanced Security)",
+      micro: "Blocks leaked secrets and finds code vulnerabilities.",
+      free: {t:"no", v:"Dependabot alerts only"},
+      team: {t:"text", v:"Add-on ($19 + $30 / committer)"},
+      ent: {t:"good", v:"Add-on, with governance to run it"},
+      whatIs: "A set of automated security checks. Secret scanning with push protection blocks a password or access key from ever being saved into the code. Code scanning (CodeQL) reviews every change for security weaknesses the way a tireless reviewer would. Dependency review / Dependabot watches the open-source building blocks your software relies on for new vulnerabilities and proposes fixes.",
+      whyTiers: "Advanced Security is sold as two per-active-committer add-ons \u2014 Secret Protection ($19) and Code Security ($30) \u2014 because you pay for people actively contributing code, not every seat. Both are available on Team and Enterprise.",
+      bank: "The catch is governance: Team can run the scans but lacks the audit log, SSO, and access controls to operate them under an audit standard. Enterprise is the tier where the scanning and the governance around it line up. This covers the \u201CSAST\u201D and \u201CCode Quality\u201D lines in the AWS stack."
+    },
+    {
+      name: "Support",
+      micro: "How you get help when something breaks.",
+      free: "Community forum",
+      team: "Web-based support",
+      ent: "Premium available (30-min SLA, 24/7)",
+      whatIs: "How you get help when something breaks. Free is the community forum; Team adds web-based support from GitHub; Enterprise can add Premium support with a 30-minute response target on urgent issues and 24/7 phone.",
+      whyTiers: "Response-time guarantees are an add-on for organizations that need them, rather than something bundled into every tier.",
+      bank: "Premium's SLA matters once source control becomes critical infrastructure the whole technology org depends on \u2014 downtime then blocks every team, not just one."
+    },
+    {
+      name: "Multi-org governance",
+      micro: "One control point above many GitHub organizations.",
+      free: {t:"no", v:"No"},
+      team: {t:"no", v:"No"},
+      ent: {t:"good", v:"Enterprise account"},
+      whatIs: "An enterprise account is a single control point sitting above multiple GitHub organizations \u2014 one place to set policy, manage billing, and see everything, even if different departments run their own organizations.",
+      whyTiers: "Enterprise-only, because it's built for organizations large enough to need more than one GitHub org.",
+      bank: "Gives us room to grow into separate organizations (e.g. by department or risk boundary) without losing central control \u2014 useful precisely because we don't yet know the full org shape ahead."
+    },
+  ];
+
+  /* ---------- Render mapping ---------- */
+  const mapsEl = document.getElementById('maps');
+  mapsEl.innerHTML = REPLACES.map(([from, to]) => {
+    const label = from.split(':')[0] + ':';
+    const rest = from.split(':').slice(1).join(':');
+    return `<div class="maprow">
+      <div class="from"><b>${label}</b>${rest}</div>
+      <div class="arw">→</div>
+      <div class="to">${to}</div>
+    </div>`;
+  }).join('');
+
+  /* ---------- Render capability cells ---------- */
+  function cellHtml(val, isEnt, label) {
+    let cls = 'cell' + (isEnt ? ' cell-ent' : '');
+    let text = '', marker = '';
+    if (typeof val === 'string') { text = val; }
+    else {
+      text = val.v;
+      if (val.t === 'good') marker = '<span class="mk ok">\u2713</span> ';
+      else if (val.t === 'no') marker = '<span class="mk no">\u2014</span> ';
+      else if (val.t === 'na') cls += ' na';
+    }
+    return `<div class="${cls}"><span class="cell-label">${label}</span><span>${marker}${text}</span></div>`;
+  }
+
+  const rowsEl = document.getElementById('rows');
+  rowsEl.innerHTML = CAPS.map((c, i) => `
+    <div class="mrow">
+      <div class="mgrid">
+        <div class="cap">
+          <span class="name">${c.name}</span>
+          <span class="micro">${c.micro}</span>
+        </div>
+        ${cellHtml(c.free, false, 'Free')}
+        ${cellHtml(c.team, false, 'Team')}
+        ${cellHtml(c.ent, true, 'Enterprise')}
+        <div class="exp-wrap">
+          <button class="exp-btn" aria-expanded="false" aria-controls="drawer-${i}" id="expbtn-${i}">
+            <span class="exp-label">Learn More</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="drawer" id="drawer-${i}" role="region" aria-labelledby="expbtn-${i}">
+        <div class="drawer-inner"><div class="drawer-pad">
+          <div class="learn">
+            <div class="block">
+              <h4>What it is</h4>
+              <p>${c.whatIs}</p>
+            </div>
+            <div class="block">
+              <h4>Why the tiers differ</h4>
+              <p>${c.whyTiers}</p>
+            </div>
+            <div class="bank block">
+              <h4>For Northeast Bank</h4>
+              <p>${c.bank}</p>
+            </div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  `).join('');
+
+  /* ---------- Learn More toggle (delegated: covers all matrices) ---------- */
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.exp-btn');
+    if (!btn) return;
+    const drawer = document.getElementById(btn.getAttribute('aria-controls'));
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    drawer.classList.toggle('open', !open);
+  });
+
+  /* ---------- Claude: requirements x 5 tiers ---------- */
+  const TIERS_CLAUDE = ["Free", "Pro", "Max", "Team", "Enterprise"];
+  const REQS = [
+    {
+      name: "SSO / SAML with Entra ID",
+      micro: "One controlled front door, with MFA inherited from Entra.",
+      cells: [{t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"text",v:"Basic*"}, {t:"good",v:"Enforced"}],
+      whatIs: "Single Sign-On lets staff sign in to Claude with their existing bank identity through Entra ID (SAML 2.0 / OIDC) instead of a separate Claude login \u2014 inheriting multi-factor automatically.",
+      why: "One controlled front door. \u201CRequire SSO\u201D can be enforced so no one reaches Claude with a personal password, and MFA is inherited from Entra rather than reinvented.",
+      fall: "Free, Pro, and Max have none. Team offers only basic Google/Microsoft sign-in, not enforced SAML/SCIM \u2014 so it can't be locked to Entra the way examiners expect. Only Enterprise enforces true SSO."
+    },
+    {
+      name: "SCIM auto-provisioning",
+      micro: "Access created and removed automatically with the directory.",
+      cells: [{t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"good",v:"Yes"}],
+      whatIs: "SCIM automatically creates, updates, and removes Claude accounts based on Entra directory changes \u2014 the joiner / mover / leaver lifecycle handled without manual steps.",
+      why: "When an employee is offboarded in Entra, their Claude access ends automatically. That closes the exact gap auditors test: access that lingers after someone leaves.",
+      fall: "No tier below Enterprise offers SCIM at all \u2014 access on those tiers is managed by hand, which drifts out of sync and fails offboarding tests."
+    },
+    {
+      name: "Audit logs & Compliance API",
+      micro: "Exportable record of who used the tool, when, and how.",
+      cells: [{t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"good",v:"Yes"}],
+      whatIs: "A record of user and system activity across chat and Claude Code, available through Audit Logs, a Compliance API, and Data Export \u2014 streamable to our SIEM (Rapid7).",
+      why: "This is the evidence an examiner asks for first: who used the tool, when, and how. Without it there is no defensible trail.",
+      fall: "Absent on Free, Pro, Max, and Team. Only Enterprise produces exportable audit evidence. (Note the Cowork exception flagged above \u2014 Claude Code is covered; Cowork is not.)"
+    },
+    {
+      name: "Configurable / long retention",
+      micro: "Tune retention to our record-keeping rules; ZDR available.",
+      cells: [{t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"good",v:"Configurable"}],
+      whatIs: "Control over how long prompts and outputs are retained, including Zero Data Retention under commercial terms, so retention can be tuned to our record-keeping rules.",
+      why: "We have a seven-year retention obligation. Configurable retention plus export to a write-once (WORM) archive is how we meet it on our terms.",
+      fall: "Consumer tiers retain data on their own schedule with no control, and can hold opt-in training data for years. Team offers no configurable retention. Enterprise is the only tier we can align to policy."
+    },
+    {
+      name: "Role-based access control",
+      micro: "Scope who can use which capabilities and connectors.",
+      cells: [{t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"good",v:"Yes"}],
+      whatIs: "The ability to define who can do what \u2014 which users or groups can access which capabilities, connectors, and settings.",
+      why: "Lets security scope the deployment: enable Claude Code for engineers, restrict higher-risk surfaces, and disable Cowork centrally rather than trusting each user.",
+      fall: "No role model exists below Enterprise \u2014 every user gets the same access, which is unworkable for a controlled rollout."
+    },
+    {
+      name: "Per-user / group spend caps",
+      micro: "Keep a usage-billed tool budget-predictable.",
+      cells: [{t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"good",v:"Yes"}],
+      whatIs: "Administrator-set limits on how much usage (and therefore cost) each person or group can incur, since Enterprise bills token usage on top of the seat fee.",
+      why: "Makes a usage-based tool budget-predictable. We can cap heavy users and avoid runaway bills while still giving the team real capacity.",
+      fall: "No spend controls exist on the lower tiers, so cost would be unmanageable at organizational scale."
+    },
+    {
+      name: "Data never used for training",
+      micro: "Our code and data must never become training material.",
+      cells: [{t:"no",v:"Opt-in**"}, {t:"no",v:"Opt-in**"}, {t:"no",v:"Opt-in**"}, {t:"good",v:"Yes"}, {t:"good",v:"Contractual"}],
+      whatIs: "Whether your prompts and the model's outputs can be used to train the vendor's models.",
+      why: "Our code, tickets, and data must never become training material. On Enterprise this is a contractual commitment in the agreement, not just a product toggle that could change.",
+      fall: "On Free, Pro, and Max, data may be used to improve models if a user opts in, with retention up to several years \u2014 unacceptable for the bank. Team carries the no-training commitment but lacks the surrounding controls; Enterprise makes it contractual and governs it."
+    },
+    {
+      name: "DPA + BAA / HIPAA-ready",
+      micro: "The contracts Legal and Risk require before processing data.",
+      cells: [{t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"text",v:"Limited"}, {t:"good",v:"Yes"}],
+      whatIs: "Formal agreements governing data handling: a Data Processing Agreement, and a Business Associate Agreement for a HIPAA-ready configuration.",
+      why: "These are the contracts Legal and Risk require before any vendor processes bank data \u2014 the paperwork that makes the relationship defensible.",
+      fall: "Unavailable on consumer tiers; Team offers only limited terms. Enterprise provides the full DPA and a HIPAA-ready BAA."
+    },
+    {
+      name: "Data residency (US / EU)",
+      micro: "Keep data in a required jurisdiction.",
+      cells: [{t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"no",v:"No"}, {t:"good",v:"US / EU"}],
+      whatIs: "Control over the region where data is stored, set at the agreement stage.",
+      why: "Lets us keep data in a required jurisdiction if we commit to a data-location standard with regulators or customers.",
+      fall: "Only Enterprise offers residency selection; no lower tier does."
+    },
+    {
+      name: "Claude Code included",
+      micro: "The agentic coding tool \u2014 the point of this deployment.",
+      cells: [{t:"no",v:"No"}, {t:"good",v:"Yes"}, {t:"good",v:"Yes"}, {t:"good",v:"Yes"}, {t:"good",v:"Yes"}],
+      whatIs: "Access to Claude Code \u2014 the agentic coding tool (terminal, VS Code extension, desktop) that is the whole point of this deployment.",
+      why: "This is our primary use case. Note it's technically available on paid consumer tiers too \u2014 but those tiers fail every governance row above, so the capability alone doesn't make them viable.",
+      fall: "Only Free lacks Claude Code. The paid consumer tiers include it but can't be governed \u2014 which is why the decision is Enterprise, not \u201Cthe cheapest tier that includes Claude Code.\u201D"
+    },
+  ];
+
+  const claudeRowsEl = document.getElementById('rows-claude');
+  claudeRowsEl.innerHTML = REQS.map((r, i) => {
+    const cells = r.cells.map((v, ti) =>
+      cellHtml(v, ti === r.cells.length - 1, TIERS_CLAUDE[ti])
+    ).join('');
+    return `
+    <div class="mrow">
+      <div class="mgrid">
+        <div class="cap">
+          <span class="name">${r.name}</span>
+          <span class="micro">${r.micro}</span>
+        </div>
+        ${cells}
+        <div class="exp-wrap">
+          <button class="exp-btn" aria-expanded="false" aria-controls="cdrawer-${i}" id="cexpbtn-${i}">
+            <span class="exp-label">Learn More</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="drawer" id="cdrawer-${i}" role="region" aria-labelledby="cexpbtn-${i}">
+        <div class="drawer-inner"><div class="drawer-pad">
+          <div class="learn">
+            <div class="block"><h4>What it is</h4><p>${r.whatIs}</p></div>
+            <div class="block"><h4>Why it matters for a bank</h4><p>${r.why}</p></div>
+            <div class="bank block"><h4>Where the lower tiers fall short</h4><p>${r.fall}</p></div>
+          </div>
+        </div></div>
+      </div>
+    </div>`;
+  }).join('');
+
+  /* ---------- Certifications accordion ---------- */
+  const CERTS = [
+    {
+      key: 'soc2-1', label: 'SOC 2 Type I', prog: false,
+      whatIs: "An independent auditor's assessment, at a single point in time, that Anthropic has designed its security controls appropriately \u2014 covering categories like security, availability, and confidentiality (the AICPA Trust Services Criteria).",
+      why: "This is a design check, not a track record \u2014 it confirms the controls exist and are built correctly, but not that they held up over time. We treat it as a baseline, with Type II (below) as the bar that actually matters for approval."
+    },
+    {
+      key: 'soc2-2', label: 'SOC 2 Type II', prog: false,
+      whatIs: "The same control categories as Type I, but tested by an independent auditor over an extended observation period \u2014 typically 6 to 12 months \u2014 to verify the controls actually operated effectively the whole time, not just on paper.",
+      why: "This is generally the bar our vendor-risk and compliance team requires before approving any vendor that will handle sensitive data. It's the difference between \u201Cwe designed this correctly\u201D and \u201Cwe proved it worked, continuously, for a year.\u201D"
+    },
+    {
+      key: 'iso27001', label: 'ISO 27001:2022', prog: false,
+      whatIs: "The leading international standard for an Information Security Management System (ISMS) \u2014 certification that an organization runs a systematic, continuously improved program for identifying and managing security risk, not just a set of point-in-time controls.",
+      why: "ISO 27001 is recognized globally and by examiners well beyond the US, which matters when we report vendor posture up to regulators who may not be familiar with SOC reports specifically. It signals ongoing security governance, not a one-time audit."
+    },
+    {
+      key: 'iso42001', label: 'ISO 42001:2023 (AI mgmt)', prog: false,
+      whatIs: "The first international standard written specifically for AI management systems \u2014 certifying how an organization governs the responsible development and deployment of AI: risk management, transparency, and oversight across the AI lifecycle.",
+      why: "This is the one most directly relevant to what we're actually buying: an AI tool used bank-wide. It shows Anthropic operates the kind of formal AI governance framework regulators are increasingly expecting institutions to demand of their AI vendors \u2014 not just security certifications bolted onto an AI product."
+    },
+    {
+      key: 'hipaa', label: 'HIPAA-ready (BAA)', prog: false,
+      whatIs: "Anthropic's willingness and ability to sign a Business Associate Agreement (BAA) \u2014 the contract required under HIPAA before a vendor can process protected health information on a covered entity's behalf.",
+      why: "We're a bank, not a healthcare entity, so HIPAA itself doesn't directly apply to us. We read this as a proxy signal: a vendor willing to take on BAA-level contractual liability and controls has engineered its data handling to a higher bar. It's also relevant if HR or benefits data ever touches the tool. Note: on HIPAA-ready plans, Claude Code is not covered under the BAA, and Cowork is not yet available \u2014 worth remembering since Claude Code is our primary use case."
+    },
+    {
+      key: 'fedramp', label: 'FedRAMP \u2014 in progress', prog: true,
+      whatIs: "The Federal Risk and Authorization Management Program \u2014 the US government's standardized, NIST 800-53-based security assessment required before a cloud service can be used by federal agencies. \u201CIn progress\u201D means Anthropic is actively pursuing this authorization but has not completed it yet.",
+      why: "FedRAMP's control set overlaps heavily with what a bank examiner expects, so it's a meaningful signal even incomplete. We should track this as a milestone to revisit, not count it as already achieved \u2014 it should not appear in vendor-risk paperwork as a completed certification."
+    },
+  ];
+
+  const certsEl = document.getElementById('certs');
+  const certPanelsEl = document.getElementById('cert-panels');
+  certsEl.innerHTML = CERTS.map(c => `
+    <button class="cert${c.prog ? ' prog' : ''}" aria-expanded="false" aria-controls="certdrawer-${c.key}" id="certbtn-${c.key}">
+      <span class="cdot"></span>${c.label}
+      <svg class="cchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+  `).join('');
+  certPanelsEl.innerHTML = CERTS.map(c => `
+    <div class="cert-drawer" id="certdrawer-${c.key}" role="region" aria-labelledby="certbtn-${c.key}">
+      <div class="cert-drawer-inner">
+        <div class="cert-panel${c.prog ? ' prog-panel' : ''}">
+          <div><h4>What it is</h4><p>${c.whatIs}</p></div>
+          <div><h4>Why it matters to us</h4><p>${c.why}</p></div>
+        </div>
+      </div>
+    </div>
+  `).join('');
+  certsEl.addEventListener('click', (e) => {
+    const btn = e.target.closest('.cert');
+    if (!btn) return;
+    const drawer = document.getElementById(btn.getAttribute('aria-controls'));
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    drawer.classList.toggle('open', !open);
+  });
+
+  /* ---------- Jira: integrations ---------- */
+  const INTEGRATIONS = [
+    {
+      name: "GitHub", micro: "Source control \u2194 tickets", type: "Source control", status: "onboard",
+      whatDoes: "Branches, commits, and pull requests link to Jira issues; the development panel shows exactly what code changed for a ticket. A commit referencing an issue key can transition the ticket, and a merged PR to main can auto-close every linked issue.",
+      whyFaster: "Engineers stop switching context to update tickets by hand \u2014 the code activity updates the ticket. PMs and auditors see the code behind a change without leaving Jira.",
+      forNEB: "This is the loop Track-It! never had: code changes and ticket status stop being two disconnected systems someone has to reconcile. It ties the GitHub tab and this one into a single workflow."
+    },
+    {
+      name: "Microsoft Defender for Endpoint", micro: "Endpoint threat alerts", type: "EDR", status: "inuse",
+      whatDoes: "Endpoint alerts from Defender automatically create security incidents in the Security Operations desk, pre-populated with the alert detail.",
+      whyFaster: "The incident exists the moment Defender fires \u2014 no analyst re-keying alert data before response can start.",
+      forNEB: "Faster detection-to-response, with a complete, timestamped incident record for FFIEC / NIST evidence."
+    },
+    {
+      name: "Rapid7 Suite (IDR / MDR / IVM / Exposure Command)", micro: "SIEM, MDR & vuln management", type: "SIEM / VM", status: "inuse",
+      whatDoes: "Bidirectional integration: investigations and vulnerability findings flow into JSM as tracked tickets, and remediation status flows back \u2014 with SLA-driven timelines by severity (Critical \u2192 Low).",
+      whyFaster: "Vulnerability remediation is tracked to closure with severity-based SLAs instead of living in spreadsheets and email threads.",
+      forNEB: "Centralized documentation and audit-ready VM reporting for FFIEC / NIST \u2014 one place for the whole remediation lifecycle."
+    },
+    {
+      name: "Microsoft Intune", micro: "Device compliance / MDM", type: "MDM", status: "inuse",
+      whatDoes: "Device compliance status feeds the JSM CMDB and asset records, keeping the asset inventory current automatically.",
+      whyFaster: "Real-time asset health without manual inventory upkeep or spreadsheet reconciliation.",
+      forNEB: "Replaces manual, spreadsheet-based asset tracking with a live CMDB tied to device lifecycle."
+    },
+    {
+      name: "Proofpoint", micro: "Email / phishing security", type: "Email security", status: "inuse",
+      whatDoes: "Phishing alerts correlate to tickets automatically, and users who fail phishing tests can be auto-enrolled in remediation training.",
+      whyFaster: "Email threat response and phishing-campaign follow-up are handled automatically rather than tracked manually.",
+      forNEB: "Repeat-offender trend dashboards and automated training enrollment close the loop on security awareness."
+    },
+    {
+      name: "Microsoft Teams", micro: "Collaboration / war rooms", type: "Collaboration", status: "inuse",
+      whatDoes: "Incident war rooms and real-time notifications surface in Teams; tickets can be created and updated directly from chat.",
+      whyFaster: "Cross-team response happens where people already work \u2014 with no separate tool to monitor during an incident.",
+      forNEB: "Faster major-incident collaboration, with the conversation linked to the incident record."
+    },
+    {
+      name: "Microsoft 365 / Entra ID", micro: "Identity & productivity", type: "Identity", status: "inuse",
+      whatDoes: "SSO and provisioning through Entra, with deep fit for the Microsoft 365 environment the bank already runs.",
+      whyFaster: "One sign-in, one identity model \u2014 the same Entra-based approach recommended for GitHub and Claude.",
+      forNEB: "Consistent access governance across every new platform, and no separate credential store to manage or audit."
+    },
+    {
+      name: "Opsgenie", micro: "On-call & alerting", type: "Alerting", status: "inuse",
+      whatDoes: "Automated on-call escalation and alerting for security and IT incidents, native to the Atlassian platform.",
+      whyFaster: "The right person is paged automatically on the right schedule \u2014 no manual escalation chains to maintain.",
+      forNEB: "Structured Detect \u2192 Contain \u2192 Remediate \u2192 Review response, with escalation that can't be forgotten."
+    },
+    {
+      name: "PDQ", micro: "Software deployment", type: "Deployment", status: "inuse",
+      whatDoes: "Software request and deployment tracking; provisioning requests tie into deployment through PDQ.",
+      whyFaster: "Software requests move from ask to deployed with tracking at each step, instead of ad-hoc handling.",
+      forNEB: "Auditable software provisioning tied directly to the request that authorized it."
+    },
+    {
+      name: "Keeper (EPM / PAM)", micro: "Secrets & privileged access", type: "PAM", status: "inuse",
+      whatDoes: "Keeper's Jira ITSM integration ties privileged-access and secrets workflows to tickets.",
+      whyFaster: "Access requests and privileged actions carry a ticketed, approved trail automatically.",
+      forNEB: "Privileged access with a built-in audit trail \u2014 exactly what User Access Reviews and examiners look for."
+    },
+    {
+      name: "Confluence", micro: "Knowledge base", type: "Knowledge base", status: "onboard",
+      whatDoes: "The knowledge base behind the self-service portal and the home for runbooks, PIRs, and change documentation \u2014 and it can auto-publish docs kept as Markdown in a GitHub repo (docs-as-code).",
+      whyFaster: "Answers are written once and reused everywhere: portal deflection, first-call resolution, and onboarding.",
+      forNEB: "The durable knowledge layer that turns tickets and changes into reusable institutional memory."
+    },
+  ];
+
+  const STATUS_LABEL = { inuse: "In our stack", onboard: "Onboarding" };
+  const jiraRowsEl = document.getElementById('rows-jira');
+  jiraRowsEl.innerHTML = INTEGRATIONS.map((it, i) => `
+    <div class="mrow">
+      <div class="mgrid">
+        <div class="cap">
+          <span class="name">${it.name}</span>
+          <span class="micro">${it.micro}</span>
+        </div>
+        <div class="cell type-cell"><span class="cell-label">Type</span><span>${it.type}</span></div>
+        <div class="cell"><span class="cell-label">Status</span><span class="status ${it.status}"><span class="sd"></span>${STATUS_LABEL[it.status]}</span></div>
+        <div class="exp-wrap">
+          <button class="exp-btn" aria-expanded="false" aria-controls="jdrawer-${i}" id="jexpbtn-${i}">
+            <span class="exp-label">Learn More</span>
+            <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="drawer" id="jdrawer-${i}" role="region" aria-labelledby="jexpbtn-${i}">
+        <div class="drawer-inner"><div class="drawer-pad">
+          <div class="learn">
+            <div class="block"><h4>What the integration does</h4><p>${it.whatDoes}</p></div>
+            <div class="block"><h4>Why it speeds us up</h4><p>${it.whyFaster}</p></div>
+            <div class="bank block"><h4>For Northeast Bank</h4><p>${it.forNEB}</p></div>
+          </div>
+        </div></div>
+      </div>
+    </div>
+  `).join('');
+
+  /* ---------- Tabs ---------- */
+  const tabs = Array.from(document.querySelectorAll('.tab'));
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => selectTab(tab));
+    tab.addEventListener('keydown', (e) => {
+      const idx = tabs.indexOf(tab);
+      if (e.key === 'ArrowRight') { e.preventDefault(); tabs[(idx+1)%tabs.length].focus(); }
+      if (e.key === 'ArrowLeft')  { e.preventDefault(); tabs[(idx-1+tabs.length)%tabs.length].focus(); }
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectTab(tab); }
+    });
+  });
+  function selectTab(tab) {
+    tabs.forEach(t => t.setAttribute('aria-selected', String(t === tab)));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel-' + tab.dataset.tab).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
