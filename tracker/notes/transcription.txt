@@ -1,0 +1,606 @@
+Dev Tools review (Non OSS)-20260716_111713-Meeting Transcript
+July 16, 2026, 3:17PM
+1h 28m 24s
+
+Benjamin Thomas started transcription
+
+Robert Glauber Board Room   0:03
+What they do is they spin up a container, you know, you define it in YAML, just like you do in GitLab. The advantage, I guess, with GitHub is the barrier, it's a lower barrier to entry because it makes it easier for people to kind of, who haven't, don't have any experience yet there. Plus it's Microsoft down, so it kind of ticks that box already.
+dot com.
+And it has these pre-canned.
+I do prefer Kit Lab, but I think there is more complexity to it. Both are from the same vendor. Kit Lab is its own company, its hub is Microsoft. Okay.
+Yeah, GitHub is Microsoft. Yeah, Microsoft. Okay, there's an open source server. I always thought Git was open source. Git is, yeah, yeah. Lab is open source, yeah.
+
+Jean-Michel Caruge   0:50
+Get up something.
+
+Robert Glauber Board Room   1:00
+So, yeah, this is the the like security tab here, and then for pricing, right, this is the enterprise pricing, and you can see like the CIC minutes included in enterprise are far, there's far much more with that, and...
+Also, package storage included.
+Um...
+The far more source, so this includes the Jenkins when we say CICD, yeah, yeah, yep, what is it? What's the what's the?
+Is it a like a native GitHub tool? It's just, yeah, it's called GitHub Actions. That's it, so I need the hook.
+OK, so, so, basically, you build that out, you, it's, you know, so there's a bunch of, there's a syntax to it, and you define your actions via YAML, and underneath the hood it takes that YAML and it puts a container under the hood, and it knows what all those actions will do, so you have...
+actions that will run on like check-in, actions that will run on commit. You can have it do, you know, run your test, build your packet, build your wheels, package them, you know, deploy to AWS, upload your artifacts that's on RQ, so on and so forth. So RQ is not a part of this, right? No, no.
+Yeah, it's just another.
+If you just go with GitHub, does it give you a code quality thing negative to it?
+Or do we still need to purchase on it? I think you could use just the high test coverage, which will give you some measure, so that is the code coverage part, but...
+Doesn't give you the code quality part right here.
+So, go plug your time, go over the set, yeah.
+So, yeah, and I mean, I guess so is probably the industry standard as well. It's one I've always used. I think you mentioned you've used it before, Ali, too. OK.
+So, it's what about 100?
+Thousand lines of code would be give it 1000 bucks a year.
+Yeah, that I'm pretty sure that's right, yeah, but this is Cerner Cube Cloud, yeah, and I think they do do it by like lines of code. That's interesting. So, do they not have, I've never, I've never paid for Cerner Cube.
+I don't know, maybe. Is there not a free version anymore? No, there is. There is a community that links here on our self-host. That's the self-hosted one. Yeah, self-host. So we can host it in AWS, right? Yep. Yeah. We can host it in AWS. So let's maybe we just go with that because so I think it's necessary, but it's not like operationally critical process. Yeah.
+There could be two alternate open source options, too, I believe, yeah, too, that can explore, yeah, definitely.
+Any other thoughts, suggestions from others around? So at this point, we have the options between...
+The code comment is.
+Uh, it's just a code repository. If we, if we were to just consider uh AWS native tool chain, we got code on it, then we've got...
+What is it by Amazon pipeline? Code build? Yeah, there's a lot. I think I put all of them right here, so all the AWS versions to their to the GitHub counterparts, so you have like the repo, right? And then, oh, I think I was the AWS, the name actually, I think I didn't put the...
+The names in here, but like this would be like code commit, right? And then, what is is it? Is that what it's called? Yeah, yeah, I think it is code artifact code artifact, yeah, yeah, but like essentially, to get to what the point you're making, Ali, is like, yeah, you would have different parts.
+Different AWS services that can do the same jobs as, yeah, yeah, artifacts is a package, is this open source or no, no, no, AWS artifact is like Nexus, yeah, that's that's we put open source packages, like Python packages, more packages, yeah, like artifactory.
+Not only, like any compiled code, that's our own code or third-party, both, both, both, so then that covers the next step, yeah, yeah, so data packages, then that is covered, so we don't need, yeah, package storage, yeah, OK.
+Um, so yeah, this is like the uh, the tier comparisons between one other, and again, I'll send this one more like their things, you can click those and um, go through, but for the same time, I'll just show this.
+Right, you can see.
+But yeah, this was the help section. Does anyone have any?
+Any questions before you move on?
+So, what I'd like to see, if you can scroll up, yeah, so you got, you got a listings of the components correctly, right? Code, repo, artifact repo.
+Code quality, but the environments will deploy SAS code cover.
+Rachel, but the only thing we can add here could be.
+SEA. SEA OK.
+I see the GitHub packages then, right, because that would are packages we have. I don't know if it's a repo or that.
+I would, why would not get you get the advanced security, yeah, because that does the scanning, yeah, yeah, yeah, what I would like is all the the left hand column right as column number one, column two should be the GitHub.
+Help.
+We have labels, so we have components that, okay, yeah, and column three, if we can have AWS, okay, yeah, and then have a cost comparison between both. Cool, yeah, I could definitely, or something, yeah, for sure, they're just a, yeah, that allows to go over and...
+Definitely, I get any thoughts, so that makes sense. OK, security part in cloud code, and that's going to there.
+But yeah, action, so ready for security scan and all, so we'll see if that covers security part, yeah, cloud code, yeah, cloud code has a lot of actions, ohh, that's a good point, maybe we should include that in, and then we probably might not need some of the...
+And if we get Cloud Core, we may not need security, GitHub security, but a lot of things are captured to the large, yeah, but we'll see that's the next part, yeah, and if there's interest, I mean, I could show you if there's interest I have, so I have packages that are published on PyPi, they're hosted in GitHub, and so I can show you the actions and how they work that does.
+The packaging, the testing, the packaging, publishing to PyPI, publishing to read the docs, so that's a demonstration of actual real working pipelines, how they work. Yeah, to make it simple, this is what I would suggest. I think, in general, in terms of the AI.
+Yeah, I supported coding as well as live coding. I think we are in sort of agreement that cloud code would be the right way to go. Yeah, okay. So, assuming we will get cloud code, to Jaden's point, let's see which opponents are already covered.
+And whatever is left, like code repository is left, and code quality is probably left. I don't know if it's there. That's our code too. So, cloud code is going to off some of these things on the left column. We said whatever is left after Azure factoring, let's have a comparison there between GitHub and AWS.
+Associate costs, yeah, and then we go go out with it. I mean, if Cloud Code is gonna cover the security aspects from the GitHub enterprise security package, then GitHub becomes pretty cheap, yeah, and after that, we could just go with convenience. I haven't personally seen, like during my research, I didn't see a lot of things that you're talking about, like carrying the security parts through Cloud Code.
+I'm sure it exists; generally, it won't let you push an environment variable.
+There's this stuff, yeah, really.
+Yeah, yeah, you can set, you can set it up and touch up with it. Yeah, dude, that's sick. I never do that. I need to look customization that when we do the cloud environment set up. There are some rules that we set up, yeah, initially that we can standardize for everyone in the team. We say this is a cloud, yeah, the policies and so on. Is that for the...
+The agent to put, like, your, so for the example he's talking about, like pushing environment variables, is that like the agent won't do that, or is that it won't even let the user do that, like if they were pushing code to your repository? Yeah, it's at the user level, it has to be. It would? Okay. You know what I'm trying to say? Yeah, like, I mean, I've seen where a lot of people do it, so like an action is when they when they go to do a push or something like that, it calls the cloud agent first.
+And then it'll catch things like that, and it won't let it push, so, like, part of the flow would be like it reviews the code, yeah, it would be a call, yeah, call, dude, that's so cool, okay, and then those pre-commit hooks, those are called, so, yeah, basically, they run the floor, like, yeah, like rough, like something like that, yeah, right, so it'll do your formatting and lifting, any kind of checks like that, secrets manager.
+All that stuff, yep. OK, that's really cool. The only candidate is we have to do it through cloud code, if it's go on terminal and get push, then it bypasses all the cloud, yeah, so that's the only thing it could be, but you can, so if you put a pre-commit hook in, if you're using Git or GitLab, at least, if you use a pre-commit hook, they try to do it through the terminal, it will stop them.
+Yeah.
+All right, so Ben, just to bottom line that.
+Just check with Carter, Jason, yeah, figure out, and then Jane, Jason, figure out what all we get from, yeah, let's call that as things we already we have to purchase with anyways, and whatever is left, let's do the compiler and create this in GitHub, sounds good, and yeah, that sounds good. All right, so...
+We've talked a lot about Cloud Code already, but just for like quick recap, basically what I put on here is like, we're not trying to replace Copilot, right? Copilot should be and practically already is the solution for every other end user. Cloud Code, we all know, is like the agent part. It's for the power users, people that are programming, things like that.
+Of that nature, so really only one of the tiers that offers will be useful to us, right? There is, however, a twenty-seat hard minimum, so we cannot purchase more less than 20 seats if we're going the enterprise route, and that seat.
+fee is $20 per user a month. And notice how I said seat fee. So you pay that $20.
+just for them to get access to that does not include any tokens like that stuff is built. They don't even get like some free tokens with it, no? No, not unless there's like a promotion. I've seen promotions where they're like, oh, if you sign them now, you get the, yeah, but like, no, if we're talking like just straight up, they only give you the.
+The product itself for $20 and then every to all the tokens are billed on the API rates, and I'll go through that below here. This is really not important; we already know like how agents will help us, right? The biggest one I put here also is that I like is documentation. This is what I think about, so that when we're doing...
+You just say, hey, Claude, can you write me a markdown file so we can write documentation and it becomes less of a like approximation for us. But yeah, you guys are pretty familiar with these tools too. So you can see here, enterprise is really the only one that cleared all the requirements that I thought were extremely necessary for us, right? And you can again click learn more when I send this out.
+So, right, SSO and SAML with and and Enterprise is the only one that allows that, so skim auto provisioning, Enterprise only one, right? All of these things, audit logs and the the compliance API, right? All this stuff is Enterprise is the only one that really checks every single one.
+of these boxes here. I did find it cool.
+Using, and we're on the other day, I was like, I wonder if Clock can hook up to that, and it can, so that would be nice to have it in a product we already are using today. Can you make a comparison between Clock Code and Copilot up there? Yeah, yeah, I was just saying here that, like, oh, if someone made the argument, why don't we just use Microsoft Copilot? Well, it doesn't...
+Copilot, although it is AI, it is not the same type of AI that. Yes, okay, that's fine. I was just wondering if they had a code version of it, but it's just regular GenAI. Yeah, yeah, exactly. Yeah, so they recently brought out a code work function, but it's not a...
+Reports.
+In this one, the cloud also has Cloud Desktop, right? It has Cloud Core, that's what you're referring to Cloud Core, or Microsoft Copilot? Yeah, Copilot, it recently added Core, which I'm guessing is, that's Microsoft thing, yeah, but Cloud also has Cloud Core, yeah, and Cloud Core, right? Cloud Code, yeah, or Desktop covers both.
+Cloud chat, so this price only for code right, or it covers the whole thing, yeah, as a cloud desktop, that's what we're talking about, yeah, yeah, yeah, this is just the this is just the subscription in general, but like how much it costs, but that includes the cohort, it's all based on the tokens, the pricing model is followed.
+And that's right here. This one is, I'm assuming, because there are different ways to for us to access cloud code. This one is a direct contract with Anthropic. Yeah. And it gives us what, plugin to go in our IDs, like a VS code. Yeah, OK. Or your terminal, you can use in the terminal, like the terminal desktop.
+VS Code application, you can download it, however, yeah. OK, I think the big advantage of the enterprise is that, basically, your it comes with the SFA, your data is.
+Sure.
+Yeah, the other way is the okay, the back end Gen. AI, the model, we hook it to AWS Bedrock. Yeah, that would not be through anthropic, however, that would be, and I'm pretty sure, correct me if I'm wrong, but Bedrock is via like code, like you're literally calling like an API essentially, from my understanding, whereas...
+Like, where you have cloud, and even the cloud API, you wouldn't be calling it through code, you would be going to anthropic directly. Do you understand the now option to submit the cloud API?
+
+Jean-Michel Caruge   15:46
+Yeah.
+
+Robert Glauber Board Room   15:49
+Through AWS, this contract might speak to an AWS, so we we just have everything built by AWS, and the anthropic APIs just that build through AWS, that's one option. Is it to point is it locally like is it still going to anthropic?
+Yeah, it's too, and then start locally host, because in bedrock anthropic is, yeah, go on, yeah.
+
+Jean-Michel Caruge   16:11
+Um, yeah, if you go...
+Yes, if you go, so when you go to Bedrock, Bedrock has an options of model you can select from. You can select model from a Tropic, from Mistral, for own Amazon models, right? So when you go there, you can set it up so that...
+Your data doesn't go to on traffic, right? By default, it doesn't.
+But you.
+
+Robert Glauber Board Room   16:35
+Interesting.
+
+Jean-Michel Caruge   16:36
+If you really want some of part of your data to go there, because some company want to pollute whatever data, then you can have that options, and then you can send some of your prompts to to entropic.
+But by default, it doesn't. So what we give you basically a menu of model for inferences and for, and then you could select Chrome. So for example, for the call center analysis, I just pick a basic Amazon model, which was pretty cheap.
+
+Robert Glauber Board Room   16:54
+Yeah.
+
+Jean-Michel Caruge   17:06
+But if you choose the entropic one, it's going to cost, I don't know, 110 times or 20 times more.
+
+Robert Glauber Board Room   17:13
+Yeah, we access my tokens, like we pay by tokens, by tokens in and out, and as we get subscription, it will be kind of subscription for some quota for you, just like what I'm hearing from Ben is still paying by token, yeah, with enterprise, they don't do it.
+
+Jean-Michel Caruge   17:21
+Yeah.
+
+Robert Glauber Board Room   17:31
+buy a subscription the same way. They know a lot then, and then you pay by usage after the fact. Yeah, exactly. You pay the C fee and then you pay however much, like you're not rate limited, essentially. Like you can use the models as much as you want, but you're paying at that API token rate. And that's what this is right here. You can see.
+Like, with Fable Five, or 4, a Sonic Five, right? You have the input per million tokens price and the output per million, right? And, like you see, the use cases right here, but yeah, to your point, like if you have your own personal cloud subscription paying 20 bucks a month, right? That gives you access to all the features.
+But then you're capped at like your usage limits, you can only use so much of of the tokens, then from there you basically it charges you per token, yeah, or per set of tokens. So, with enterprise plan, that is not an option, can we get the subscription with unlimited or some quota of?
+No, yeah, so you're just paying for what you use, essentially, but there is a there is an option with enterprise to spend, so cap limit, so you could put, I don't know, maybe like on a user, you could say, I don't want you spending more than 250 bucks in a month or something like that of tokens.
+
+Jean-Michel Caruge   18:48
+Yeah.
+
+Robert Glauber Board Room   18:49
+You could do that, like technically, in the enterprise level. If someone ends up using Fable Five for everything, exactly, they'll hit their limit extremely fast, yeah.
+
+Jean-Michel Caruge   18:53
+Yeah, but you.
+You want the you want the flexibility to be able to switch between different providers, right? For example, we might do some inference with entropic and then do some prediction with some other model like Mistor.
+
+Robert Glauber Board Room   19:14
+Yep. No, I totally agree.
+
+Jean-Michel Caruge   19:15
+Right, so we want...
+Yeah, we want that flexibility. So, that as a control, so that you have to have multiple enterprise licenses for this. I would like to stress that out.
+
+Robert Glauber Board Room   19:29
+Yeah, 100%. Um, actually, there's also multi-model platforms too. I've heard a little bit about that. You can, if...
+But it is several models like Claude, Gemini, GPT.
+
+Jean-Michel Caruge   19:38
+Yeah.
+
+Robert Glauber Board Room   19:45
+What's the other one? Sensor, I think it's called. Yeah, OK, gotcha.
+That's a good leverage different models through like a multi-model service, if, if that's a thought, yeah, I need to log.
+Yeah, it's also it would be a separate provider, but they would they would provide access to Cloud Code, ChatGPT, Sensor, Gemini, Sensor, Rode ID. I think Sensor does that, yeah.
+Acct.
+
+Jean-Michel Caruge   20:11
+Are you talking about things like fireworks for serving AI models?
+
+Robert Glauber Board Room   20:18
+What is it called?
+
+Jean-Michel Caruge   20:20
+Are you talking about serving your own AI models or are you talking in general?
+
+Robert Glauber Board Room   20:25
+No, not a local. It's it is still hosted on the web, but it's.
+
+Jean-Michel Caruge   20:29
+Yeah, yeah, yeah. So yeah, you can host it on the web, but for serving your own AI model. Is that what you're talking about?
+
+Robert Glauber Board Room   20:38
+No, that, so that was it, but I mean, that's that would work for us even better.
+
+Jean-Michel Caruge   20:41
+Yeah, so, so there's like a there's a company called Fireworks that allows you to do that, so you just deploy the stack and then they give you an API. You can do API call to be able to to question to to serve basically model inferences.
+And then you can choose, you can choose, so you can choose, there's a menu of model also you can choose one.
+
+Robert Glauber Board Room   20:58
+Oh yeah, I see.
+
+Jean-Michel Caruge   21:05
+And they give you a low latency, all that kind of stuff.
+
+Robert Glauber Board Room   21:06
+Yeah.
+OK, yeah, it might be a thought, so...
+If you want to go with bedrock.
+What it takes us is not needing to on the new vendors again. Red Rock is going to locally host the models, so we at AWS already cleared, it's we're going to get billed through the same feed. I want to go get another approval for a new vendor, a new tool.
+I just want to see if there are any cons to this or any.
+Any any issues that you feel this could be?
+The only thing we wouldn't get is clot code, I'm pretty sure. We would not get clot code the same way we would with. So clot code is, I think it's more on the client side thing.
+associated AI model will be bad wrong.
+
+Jean-Michel Caruge   21:58
+Yeah, so are we talking, are we talking about just inference stuff, or are we talking about analyzing code? It looks like we're talking about inference, right? So we will.
+
+Robert Glauber Board Room   21:58
+Bye.
+I'm talking about both.
+
+Jean-Michel Caruge   22:09
+Oh, both.
+
+Robert Glauber Board Room   22:10
+Yeah.
+I'm pretty sure they're solving two different problems if I'm not understanding or if I'm understanding correctly is what I mean to say that Bedrock is more like AI as like the
+
+Jean-Michel Caruge   22:21
+Yeah, inference.
+
+Robert Glauber Board Room   22:23
+Yeah, where if you have like cloud code, you're using it as a tool rather than it being baked into your tool. No, I understand. There's going to be a tool part which will have to be on the client side. Yeah, and that would probably be cloud. But anything being done is eventually going to be processed by the back-end AI model.
+
+Jean-Michel Caruge   22:27
+Yeah.
+
+Robert Glauber Board Room   22:42
+Yes, definitely. There's no local models, AI models, and no small models that are installing on the client machine. So the plugin that we have is the conduit, right? It's the one that's picking things up. It's doing the input outputs. But the actual processing is even whether it's, you know, whether we call it general inference,
+code scanning, whatever I'm assuming, it's going to pick it, push it to the back end AI model, and get the results back, unless people understand it differently.
+That's how it is, yeah, and he has the model source, either bedrock or anthropic, yeah, this part I think we should double check if maybe if we've done the research as okay, but the token pricing, if that is the only way, or just like our subscription that we use, if enterprise has that option as well, yeah, and enterprise does only do the the tokens, yeah, yeah.
+Were you doing something similar right before you left the job? In DTCC, we were doing all this analysis. We were looking to get to bedrock at that point, getting inferencing from bedrock just to keep all data inside our thing, but there was also discussion about cost that's much costlier.
+Than getting the plan, but I don't know what enterprise level, as I said. I mean, it must be looking at enterprise. I don't think they're going for a lower tier than that. Yeah, enterprise only, but in this case, we were at least for POC, we were not going to bedrock directly.
+The cost could be very high if we go by token base, yeah, yeah.
+
+Jean-Michel Caruge   24:15
+Yeah, I got the money.
+
+Robert Glauber Board Room   24:19
+But, in case, yeah, in case we have an option to use our individual pack, like pro services, pro or pro max, we'll have to access that to one enterprise version, or we just get our own individual pro plans and then use it with.
+
+Jean-Michel Caruge   24:19
+I guess.
+
+Robert Glauber Board Room   24:39
+Hey, that is Jake.
+The only thing you do.
+If we want the compliance API, if we want to configure like retention policies and things like of that nature, spend limits for SSL, right? We just gotta be mindful of this will survive scrutiny through the vendor process for the evaluation process. You know, they're gonna ask about compliance API audit logs and things that, whether or not we...
+Choose to go with, exactly. You know, how much control do you have over each user having their own account? What's to stop us from, you know, you get where I'm going? Yeah, so Jason, your cost concerns, so the reason you thought going with Anthropic is cheaper, because I believe you assumed with Anthropic we can get like a fixed subscription, yeah.
+Did you run team? What that seems to be? Did you run team maybe instead of enterprise, 'cause I know a team has fixed costs, but we missed some security controls. I was gonna keep those security controls like it's team plan. We were still in early stages; we didn't explore the plans, OK, but we were getting there, yeah.
+What does that mean look like?
+Do you plan for greater enterprise right here? Yeah, so like you don't get like full like skim provisioning, you don't get like I thought it was a skim provisioning, this is kinda like a it's not a bank-wide application where you control a ton of the only thing I'm thinking about is just like long-term too, like I don't know.
+What, like, how many developers are we gonna get? You know what I'm trying to trying to say to the two? No, we can only switch. True, very true, very, very true. My thing is though, with Cloud Code, right, it's gonna be an on-off, like a developer has it or doesn't, so it's essentially SSO. It's not like we're gonna have 50 different groups in all different tier levels within Cloud Code, so you don't necessarily need us to be provisioning that.
+OK.
+It does offer a basic, but it says Team Sports, Google slash Microsoft sign in only, but not for Sam only. Like you said, you don't need to skip in, yeah, you know, but...
+Yes, you do get that a little here. Yeah, like we can still control the users through Entra with SSO. It's just, you know, we want to have as granular control, but I think it's fine. The only thing you don't get though is the audit logs and compliance API, which I think this portion is required if you want to connect it to Veronas. And I don't think you can. I think that's the Enterprise is the only one you can connect it to Veronas.
+Sure.
+So they say, hey, what are you people like putting into pod? That'd be the only way to check.
+Yeah, I mean, that was my mind that they don't know what I have.
+No pre-allotment of, you know.
+default amount of tokens that you get with enterprise. I know, yeah, yeah.
+Then we can talk to anthropic team when I explore this together. Yeah, definitely. And we can set up a call or something with them too. Yeah. Because they're almost saying it makes more sense from a cost perspective to just have an individual account. Yeah, yeah. It's expensive. I'll go down here. I mean, I have the $100 a month. Right here.
+I don't think I've ever blown out my token. I hit the five-hour on that all the time, but I, I don't, I've never blown a week, but yeah, I've only ever hit the five-hour.
+Yeah, so if we, like I said, there's a, that's another thing we want to consider too. This is a minimum of 20 prices that we would be.
+
+Jean-Michel Caruge   28:04
+Bye.
+Night.
+My only caveat with individual account is like if you want to try, for example, when you do testing, you're building model, you want to test different models. When you're testing, you want to test pretty with cheap models, like the Amazon model, the Mistro model, or the, and then when you go to a stage in production, then you change to a much.
+
+Robert Glauber Board Room   28:22
+Yeah.
+
+Jean-Michel Caruge   28:27
+A better model, right? So, you want the ability to have that that that menu.
+
+Robert Glauber Board Room   28:30
+Yeah.
+So, would Team be the middle path between all our enterprise versus individual accounts? Yes. Yeah, I think we can augment some of these audit requirements that we have. It has a way to get the logs to open telemetry format it supports if you have any other.
+Tool that access open telemetry logs, yeah, we can ingest in that, so, yeah, like on the team, you're saying, yeah, team, and then our own audit and logging on top of it, OK, my son can do it, wrap, wrap, so they can do it, they can, yeah.
+So, we can explore team, and then I think next step could be talking to anthrop.
+With P. Bobby saying, do we get like a fixed price subscription? Yeah, $100 or 20, or maybe it's 150, it's something around that, yeah. Oh, I can't check on here, but I can.
+The.
+Okay.
+Do we have any MDM type of solution which can push the policies across all the machines? Yeah, we have Microsoft Intune for other devices. OK, that's something we need in this one. You do, yeah, so 5 to teams for about 5 to 150 with the standard seat. That seems like it's $20 which is like looks like just kind of like...
+Pro subscription, and then you get the one. Ohh, so is that really what it is? Is it like, ohh, you have a team that has like a ton of pro or the $100 subscriptions, but centralized, yeah, under one team. OK, that seems OK, that makes a lot of sense, actually. So, what is it? What's the cost for if you go with eats for those $100 a month, $100?
+We use it for, we'll use it for a month, plus 20, then 20 is not applicable, right? We can, we couldn't use that 20, I think you would run out of, I think, yeah, no, not that the enterprise had $20 minimum, that is the without any any package, yeah, that's without any usage, yeah, that's not applicable for teams though, right? That like $20 was only for enterprise.
+Yeah, that was only for anything seems to be 20 and 100. Is it you got the number of tokens included? Yeah, it just depends on what you would get for tokens. OK, otherwise everything else is the same. It's just...
+Size of the token package, yeah.
+Fixed cost versus on how many difference in 20 versus 100?
+They don't say directly, they just say five times more usage or like the same as per usage. I'll have to look.
+Then, by default, we can start with 20 for everyone, and we'll see how many of us. Yeah, what happens if you go faster? Do they just stop, or do they start charging us for per token? Is that right? There is also, you can set budgets and all that. There's a per token rate too, like with these payments.
+So, like, even like I know what you're saying, you use your full usage, and then you start paying by token. Basically, you say, "Charge me for, you know, say, whatever $50 worth of additional tokens, and then at that rate, yeah, you're paying your token rate, but they, but they still rate limit you, is the point I'm making, even even after that. So, as in they drop you to a different model or? No, no, they just say, oh.
+Like the usage limits, they'll say, like, okay, even though you're using the per token or the, like, the API rate, essentially, they're still gonna rate the usage amount that you can use.
+So I guess, so what I'm not getting is, so the rate limiting you, I think I might be misunderstanding, so they're not preventing you. I'll show you exactly what I'm saying.
+I know it's kind of all the limitations they have are confusing.
+Okay. Is there an easy way to compare it? I'm sorry, I'm just stuck on that to avoid us needing to go to another vendor onboarding is a pain in the ***. It is. If you were to use the AWS Redrock, what would we have as our IDE plugin? What are you going to have on the client side?
+Same, whatever you need here, whatever. Is that like a free download? Yes, download from the client is free. Client side is all free, yes. And we just hook it up to AWS Red Rock for the backend mortgage. What would that?
+End up costing, I just wonder. That's by usage, it depends on how much we use. I'm just wondering, can we start with that as the resistance right now? Yeah, 'cause it allows us to onboarding a new vendor. First of all, we have to get approval.
+Additional cost, if it's 15,000 more in bedrock piece, it's all under the hood; it's already taken care of, but if I have to go and say new vendor, then we are putting in a few more weeks before we get started. Yeah, so can we maybe get started? Yeah, John.
+
+Jean-Michel Caruge   33:55
+Yeah.
+I, I already using it, I use it for for the call transcription, and then I use it also for document analysis, no document already, remember, so it's just it's just a it's a simple API call using a Buotte free.
+
+Robert Glauber Board Room   34:08
+Okay.
+Do you have the cloud desktop or the cloud client installed on your VS Code, John?
+
+Jean-Michel Caruge   34:19
+No, no, I don't have that. I do everything particularly through for now through Python.
+
+Robert Glauber Board Room   34:24
+Yeah, so what I'm suggesting is, obviously, the Bedrock we're talking about is now through Northeast Bank's enterprise account with AWS not personal accounts. But let's start off with having our local plugins, workstation, whatever it is, but hook it up to AWS Bedrock.
+Let's just monitor the cost, see how it is. There's not a...
+Many of us, maybe just easier that.
+If I just keep one more cost, you can keep more cost, yeah, some company got $5,000,000 bills suddenly, yes, someone, let's put a limitation.
+
+Jean-Michel Caruge   35:01
+No, yeah, in control tower, you could set up like a billing alerts.
+
+Robert Glauber Board Room   35:05
+Yeah, perfect. Let's put alerts for, I don't know, 1000 bucks every time that we cross a problem. Just on that bedrock itself has two options to as we talk this token-based, but holanthropic API as well, as I mentioned earlier, can be done through AWS invoice.
+So we are not literally going to get another vendor. Is there a benefit of going to bedrock to anthropic by API or going to a bedrock local hosted model? So this is going to not the second option I was talking about. There's no bedrock involved in it. It's just the invoice saying.
+Management, we don't have to still imply we'll have to onboard and no, then then that's...
+Legally, it's all contract is with AWS. Yeah, we're not getting entropy all in the vendor as such the AWS contract.
+Will still mention, and probably AWS is just being almost like a reseller, right? Yeah, we have some of those reseller agreements, we still need to clear the words in there and essentially say AWS is like the master, unfortunately, so do we wait?
+
+Jean-Michel Caruge   36:21
+Wait.
+Wait, are we saying that we have to clear any vendors that are providing model in AWS bedrock?
+
+Robert Glauber Board Room   36:31
+No, no, no. The AWS bedlock serves models through two paths. One is the models are hosted within AWS. So for practical purposes, they're putting in the software, and it's an AWS service. It's just the different flavors of models. For that, we don't have to, as long as we clear AWS.
+
+Jean-Michel Caruge   36:37
+Yeah.
+What?
+What?
+Okay.
+
+Robert Glauber Board Room   36:51
+All good. What Chetan is mentioning is AWS offers another method where you go to Anthropic directly, but you go via AWS. So billing wise, you still get a consolidated bill with AWS. So in that case, since the actual service or the models are being posted to Anthropic, we'll have to clear Anthropic.
+
+Jean-Michel Caruge   36:58
+OK.
+
+Robert Glauber Board Room   37:11
+Is there any advantage going that route? Second route you can use then packages, Pro, Pro Max, $100 per month, $20 per month, that you can still get through AWS billing. All right, so what I'm saying is this whole Pro team package thing, whether we go through Anthropic or AWS.
+Let's keep that aside for now. For now, unless we are really missing something critical, let's just go through a local plugin going to AWS and do it that way. So, one more point to consider from the cost perspective is, if we go with GitHub Enterprise, I just looked it up, you get...
+
+Jean-Michel Caruge   37:38
+Yeah.
+
+Robert Glauber Board Room   37:49
+Every individual developer gets a 4000 token credit per month to use, so to opt, so you could use those for other tasks, like to opt token credit for which model for GitHub Copilot, yeah, GitHub Copilot.
+So, for things like, if you wanted to like run and test or do code quality like thing, Copilot is completely capable of those things. Got it. So, that's a separate one. This cloud code part is separate. So, cloud code, I think we have a decision here. Let's go down AWS Red Rock. For the first one, Ben, as we requested, we just want to have a...
+Quick second review, yeah, I can definitely, so I guess the point was, like, if you use, like, your, if we go to GitHub and then we have those credits, you can, you know, use those credits or things, so you're not spending credit, you know, yeah, tokens on, yeah, on AWS, you might get your cloud models through that.
+GitHub, yeah, exactly, yep, yep, whatever we could use, yeah, this consume that first, and then, exactly, yeah, yeah, so I'm curious how it works with with Microsoft Copilot that we're using now, because that's being fed to GPT and, or I should say, OpenAI and Anthropic, or is it not, because they were using the...
+The GPT models and Opus model, they're hosted in Azure, so it's like a subset version, but it's self-hosted, yeah, so it's not going out to, no, it's not going out, okay, okay, it's built Microsoft, okay, 'cause I didn't know if we had already cleared them, that's what I was thinking, okay, yeah, the company and the associated model is two different things, right?
+OK, yeah, so any vendor can buy it, yeah, at some point, if we grow enough, we can buy our own own GPUs and install, yeah, cloud, yeah, interesting. OK.
+Um...
+Okay, so yeah, it looks like we reached a decision on this part. Yeah, Jason was going to say like the same thing. I put a note in here that Jason said to run 2 plus A add stacks, but we basically already talked about the ability to do that with Bedrock at this point. So yeah, the clad tab is complete. We do have like 3 minutes left.
+So there were two other things, the JIRA section. Yeah, let's look at it. Yeah, so Carter, I might have, if you can help me with this one, because this is heavily based off the thing that you had already done. So there's a lot of information in here that you probably recognize. But.
+There's the estimated savings versus tracking at the twenty-five agents, right? Or should the twenty-five people agents, just meaning people. If we go with Jira, we're saving eighty-five 100, yes, yeah, exactly. OK, multiple departments would eventually be able to use this, not even just the tech department, and this is...
+Is it an apples to apples comparison in terms of users or licenses? Sorry, can you say that one more time? Is it an apples to apples comparison between Tracket and Jira in terms of the numbers of licenses and seats? Yeah, yeah, and then does Jira give like an unlimited?
+
+Jean-Michel Caruge   40:52
+Okay.
+
+Robert Glauber Board Room   40:59
+Site license, or what's their licensing scheme? They do it by the user, by the user who actually needs to log in, so you can have unlimited users that have to hit like a form to submit a ticket or something like that, but then in terms of technicians or like development users from using tech issues, yeah, built by that, yeah, I saw, so the folks who have to action the tickets.
+Yeah, those are the ones we are paying for, but ticket submission is unlimited, exactly, and connectors are unlimited once you have it, and we took that those numbers into consideration when we are comparing with tracking. Yes, OK. Well, that's good then.
+Are we looking to host this internally? No, yes, yes, yes.
+Yeah, we don't we don't use Gira as Atlassian, yes, right, so we we don't have Atlassian today as a vendor, no.
+Yeah, yeah, and that's part of the benefit, and the reason we can bring the cost down to that is that we can actually get rid of an on-prem server that's hosting our Trackit instancing cost as well. Yeah, the Crackit, so these savings are the pure Crackit licenses or some capitalized? All in, if you were to get rid of Trackit, so it's server cost, Gladiator support cost.
+From Jack Henry license cost, in general, we have to have a SQL instance on that server as well, the host database, okay, and it's a recurring cost, so yeah, this is okay, great, fantastic. It's a good story here, great story, actually, really good stuff doing the cost analysis by comparing all and track it.
+Because normally people would just go and compare the licenses. How much would it be people to just compare licenses sort of?
+Be like 15,000 more for JIRA, but OK, all in cost, save money, yeah, yeah.
+So like benefits that with Jira, the biggest one is just automation. Like tickets can be created automatically. This is going to be super important for when we like have things like GitHub or anything in version control in general. When PRs are made, that stuff can get pushed immediately the second it's made into Jira. We would not have to do that.
+manually whatsoever. Yeah, everything, every change is documented as it happens, right? Change management can be a whole lot easier. Things would get compiled and put together automatically. And yeah, everything is like through the self-service like platform. So you can see like all the different tools and plugins it uses. Again, Carter, these are a lot of things that you had listed to, like obviously the Rapid 7. Yeah, I mean security, but there's more.
+Yeah, development that can be done here, exactly, from an engineer perspective, you get like comp on boards, swim lanes, yeah, like project tracking, tracking.
+Wikipedia with confluence. You like here? I like here.
+Can't beat it. Confluence is part of this or separate? Confluence, I see at the bottom, is proposing to get Confluence as well. Yeah, yeah, and this price includes Confluence license as well. I think so. I can confirm that. I'm pretty sure it does, yeah.
+Yeah, what was the table again? What exactly was it showing you? This right here? Yeah, yeah. This is just showing each of like different tools that we would be using or are using currently. You can see like this is the status of like at any of these, like this is ongoing. It's not necessarily showing things that are included in the cost. No, no, no, no, no, no. It's just showing like what...
+What directly can work with it? That's like that on stack in a way, except GitHub, yeah.
+This is essentially the security stack, but for a lot of our stuff, but we can add. It's just saying that these are some of the examples of connectors that you can use to work directly with it to your automations. Oh, this is the integrators. OK, integrations. Gotcha. So you can say, like, I've seen people do, like, in Teams, you know, if you wanted to have something where you do XLAM create ticket and then type something in, then it can create a ticket in JIRA or something like that.
+Yeah, you know, and the Intune integration is actually a good point because it's nice because you can have Jira on your phone and you can actually use it on your phone and it is handy to be if you're on the road or something or traveling or anything.
+I have to laptop with you for whatever reason.
+Ohh.
+So, I mean, in general, we are saying Jira is going to be compatible with our.
+Security monitoring and all of that, yeah, and general, it will replace the entire IT ticketing system and facilities ticketing system, yeah, project management system, so we can replace all of that, yeah, like a pager Ops or something now, too, no, which is, which is something in the cost savings to your point, should we also include some of the other project management systems we would be a pain point, maybe?
+We tried to only compare it one to one because we were concerned that if we put it out like this, then we'd have to ask a lot of other departments for their approval and to go through processes with them and we thought it would take too long. But we can if you'd like to. Let's just do the assessment at least. Eventually, we don't want to have overlapping products. Yeah. I think you're concerned that someone else is using some other.
+project management tool and whether they'll be willing to move to Jira.
+I think we can move that. Okay, Jira is the latest, so let's include that. What I'd like to see with Jira, I think Jira makes a case for itself. We should just go ahead with it. What I'd like to see is with Jira, this is our cost and all the things that we get to retire, and that's how we're getting.
+So, with the things you already considered, it's 8500, but with some of the other systems, like project management system, etc.
+To be in the moment, okay, so that that would be getting a strong case. Okay, the one thing to keep in mind is Rapid Seven is at default when it comes to our manage detection and SIM, but with Mission Cloud coming in, yeah, absolutely, keep them in mind as well, because they are more aligned with.
+Cloud and more aligned with some of these things, so, and we can compare whichever you guys are going to be your call in the end, Carter, which, whichever direction we go, but let's keep both of them in mind.
+The other thing, what the things we'll get to do with Jira in addition to our project management stuff is it could replace our ticketing system even for Help Desk. Would that change the way in which people are going to enter the tickets? Today they just send an e-mail, they don't really have access.
+Access to our ticketing API, yes, UI, so we can keep that, and that can still be a feature, and then we can add things on top of that, so we can add like a help desk or help.northeastbank.com, then we can have a form fillable, we can add, oh, okay, big thing, Jira will also get rid of the PDF land, the land form thing.
+In any form, so we can replace all forms. If you've ever filled out any PDF form, it can be replaced going forward with Jira. Awesome. Yeah, Jira is gonna be like the strongest case we ever made. Yeah, like I talked to Pat and Rick about just replacing the land form. Yeah, that itself sent them to heaven, like they'll approve anything just to get rid of.
+Yeah, all right, so let's let's we come up with a comment, do some automations to the if users are used to sending emails, you can have some automation there that can scan e-mail and directly for them, yeah, so that way people don't need to change a lot of operation, we have operation, we we have that actually set up in our demo environment as well, so we can demo that already.
+Yeah, is it the same or much different than what happens with track it? Crack it also, you send an e-mail to an address, track it, yeah, track it has it, yeah, so the the biggest benefit is we can create multiple queues, so, whereas track it, it's all done through business rules, so everything essentially is set to help Desk at Narminortheastbankcom, you can start creating like...
+facilities help at northeastbank.com and it'll go auto to a separate queue and then you can create automation that happens based on that. That's really cool. Yeah, yeah. And with people having the ability to log into a UI.
+Are you guys getting much longer? We have a ohh, yeah, no, no, we're getting out.
+No, no worries.
+
+Boston Northern Ave - Large   54:10
+for five hours it will stop you? No, it's tokens within a five, yeah, it's like tokens within, there's a lot of tokens within a five hour limit, so it would just separate from your weekly allotments. You can't, you can't like do massive sprints and use all your tokens all at once. Really? Yeah. Yeah, the $100, yeah. This thing right here.
+Say, this is your five hours. Yeah, I guess I've never heard it on the $100 in five hours. I only use it. I use it as a few programs. Yeah, yeah, I'm pretty obsessed. I've been trying to, yeah, I do. That's why you have like this ball, and that's like almost totally.
+So, one, like, for like retreating, I use, it's a three-tier model; first tier creates the first strategy, second one writes the strategy and put one back test, rinse and repeat, and it keeps improving the model itself, so itself improving the circle, yeah, and you can you can use tokens fast.
+Yeah.
+I have hit the cursor limit very quickly, but that's it's just bundling the cursor the way I go, just the way cursor works, it makes it like going tokens, it seems.
+Yeah, I've been obsessed with like MCP and trying to make stuff loop like that. I started doing looping stuff and I was like, this is not so good this is. Yeah. I still need to try it out myself. I was trying to look MCP. You just write something as a base and then you and then you write another one, like another prompt, you just tell it, improve the first one just over and over and over. Is Ali coming back or?
+Yeah, yeah, that's what Roger is talking to.
+Look at that, dude, that's anything on the monitor. It's a we got a piece of, we got a piece of clothing over on, we got something in the dev tools, so I got the henna from Morocco, the monitoring.
+I guess my wonder about that is, I think there's this emission cloud from during the gambling, she's got to have their monitor, she's got a sound to the P.C. over on the, yeah, I have, we had, of course, we had the G9 entity, we're still looking for the monitoring and observability, we have the PRP.
+I would be, so I can do, so I think we're gonna use, it would be a combination Vision Cloud, because they're using CrowdStrike, yeah, and then that covers AWS, everything in code, and then on the PCs, so I'm talking about the, yeah, like even, yeah, counting Jira.
+Ohh, absolutely, get a ticket or something, observe it in monitoring the desk. Is this a call? Yeah, ohh, so like, there's no alert, we have, yeah, alerting, that is important, like on call rotation, the on, yeah, you had to buy something, please come to, you remember on the, yeah, you're right, we did talk about that.
+Yeah, so in the day, you end up looking like that. That's what it was called on. Alright, and did you count the observability and monitoring one?
+The one that you, oh, it will come in. Yeah, it will come in.
+Innocent.
+So.
+This is.
+Ohh, definitely. Alright, where, where are we then? So, this is the documentation section. So, there are two pieces in my from my perspective, there are two pieces to this whole situation. Yeah, no, no, that's fine. There's also another two, so...
+Right now, or what we were discussing, right, with Confluence, right? I see, and I was talking to Jason about this earlier this morning, I see that as more or less, we're playing a project out. So we're talking about, we're doing the whiteboard session and writing out like what our thoughts are and following up and making notes like, oh, who's doing this and who's doing that? And that all gets put into.
+JIRA as well, because it links right into one another, right? That's one part of documentation and the whole process, right? But then the other part is documentation for the tools that we make and for the things that we do. So let's say we make an internal tool that in our business is growing, right? So different.
+maybe different departments would be using this tool in their code and they want to refer to that, that like documentation, they wouldn't necessarily go to Confluence. But my idea is we set up a statically hosted like wiki essentially through a platform.
+It's fully open source and fully free called DocuSource. And what it is, is you write docs as markdown files. And markdown files have been in this industry for years. They've been on GitHub. That's how GitHub does the read me stuff. And so what you would do is you would write your docs as markdown files, but instead of a doc
+MD, it would be a dot MDX, and the X, if you're familiar with React that's made by Meta, this is also made by Meta, which is kind of funny too, but the X is for React components, and so where Markdown lacks in its expressibility as far as like customization and things like that.
+you can fill the gap with React components, and you can write React directly in markdown file. What you would then do is have a GitHub repo that's specifically for documentation, and you can push all these docs to a GitHub repo the same way you would do it as code, and it would get reviewed and everything like that.
+And it would live on a server that we can host to AWS. And that would be your documentation for different tools you're building. I think this is a perfect idea. I don't know like how you guys feel about it, but it fills this loop exactly the way like I'm imagining it, where you're writing code.
+pushing it to GitHub, Claude can draft the docs for you, right? Claude won't be writing all of our docs. We still want human intervention and being like, okay, this is how things are, right? You know? But it would draft a majority of it for you, so you're not doing all the heavy lifting. Then that gets pushed to another repository and gets reviewed the same way code does, and then it renders it.
+like a static HTML website that includes like the table of contents, light and dark mode, all the different features that you want. Sorry, I missed the initial part. So is DocuSource a separate tool that we are, you're suggesting? DocuSource, yeah, it is a tool. It's more or less like, I like to think about it more like kind of like React where it's like a framework sort of.
+But it's fully free. You're not paying for this tour or anything like that. And it's not like your code is leaving and going to another service or anything. It's all self-hosted. The only thing we would be paying for is the place to host it, like on AWS. I'm just surprised Claude's not going to come up with a final out of the DocuSource.
+It does, it won't, it won't come out with the with like the place to host it. DocuSource is doing the hosting for you. OK, if that makes sense. No, I shouldn't say hosting for you, but the the framework, the framework, yeah, the rendering, exactly. It was, if you just write lockdown files in MDX, yeah.
+Users can still render it in maybe HTML format. Exactly. It gets rendered to HTML, like a static web page. Yeah, exactly. But you're not writing, no developer would ever be responsible for learning or writing HTML. You would only be writing markdown, which is very, very easy to work. Markdown needs some humor.
+Bold, and all that, we can easily get very easily just by reading the files, and this makes it more easy to read, like anything single word format, for example, if the titles H1H2 when very, yeah, that is since OK, and we host this docs on AWS, yeah.
+Yeah, that's the idea, and yeah, the only other cost would be the place to host it. That's the only cost. Well, what's the other option from a documentation perspective? It'll just be, we could try, yeah, host it all in Confluence, which we, it's not impossible, but Confluence is like a what you see is what you get kind of situation. It's not.
+There's not a ton of customization, so, like, you can't write, for example, you can't write markdown files and then upload them to Confluence. You're kind of stuck with in there, no, we can, we can HML.
+We can do this, we can do this. I moved that up, and it says that you can do it. No, it'll do it. We can do that. Ohh, I take back what I said that. I'm sorry, I actually no, it doesn't do the whole React stuff, but just 'cause you like stack HTML. Really? We can, you can do that in just because you said for other departments, you can do that in SharePoint as well, so like on my...
+On the IT, on the security team, SharePoint, we, I have seen that they finally added that feature where you can view the markdown in in SharePoint, GitHub, the GitHub, your your so GitHub by default, and you're expected to add a reading document, and that gets translated to HTML as well, but it's...
+That's not going to be all-encompassing documentation; that's just gonna be like, "You're getting started, like things you should know, you know, like the holding specific things, yeah, well, do you have pages there, right? Do you have pages? Oh yeah, yeah, that's a good solution too, yeah, alright, that would that would fix like hosting it, like if we didn't have...
+Place to host it, we could use GitHub pages, so if we just write markdown files and you know pages can render it, yeah, yeah, yeah, but I mean, to the point Ben was making too, so Docker Source seems to use the same format as like read the docs, so basically you put a docs folder in your project with a bunch of markdown files and...
+Yeah, and it just, yeah, yeah, this is what I wanted to show too. They have like a, like a demo, but essentially, like your static stuff, like your static file, if you're familiar with, like, or say I mean your source file, if you're familiar with web development, contains like all your things, like your components, your CSS, the pages, and everything like that.
+right? But you would, everyone would commit their stuff to this docs folder, right? And in here, this is where like the MDS lives. And on here, like this could be like an example site where like you can click this and like see this, this is all written in markdown and all of it's just rendered here for you directly.
+You can like have code blocks that you can copy, right? All this other stuff. And this is also super vanilla. Like I've seen people take this 10 steps further and it like looks beautiful. And you can do a ton of stuff, table of contents, light, dark mode, everything like that, all here. Oh, it also always doesn't matter. Yeah, what I'll suggest is.
+Given that we have workarounds with some of the tools we'll be purchasing for now, maybe we keep this one sort of as for later. Yeah, for sure. Yeah, for sure. What else we have? And then, hold on, let me just look at this real quick.
+Okay, then the last discussion, and I didn't even add any recommendation here because I added this kind of like last minute thing when we were talking on e-mail yesterday or two days ago or something, but a cloud development environment, right? These were the few options that have been talked about previously. Anna was the only one that...
+Wasn't, it was another thing that I had looked up that was another offer we could use, but GitHub Codespaces Coder, which was one that Jason had recommended, fully open source, right? He can self-host it, and then this is what the IDE or what is it? Yeah, the these are environments, so these are cloud development environments, so we're now using...
+WSL. If we want to continue using WSL, that's probably okay. I don't know what the strategy is here, but the point is we need.
+We need to place an environment for us engineering. It's nice if you have an environment that's standardized. It's essentially the all the host side resources, the small version of it, right? A bunch of instances, yeah, yeah, so it's like where you're writing your code, OK? You know, where you're running your, where you're deploying your code in your when you when you develop.
+Right, yeah, yeah, so, so, yeah, CDA is the cloud environment, there's the popular things, and the nice thing is this, like, would VS Code fit in here? Yeah, yeah, so, so the way they work is, you still run, you still load VS Code locally, just like you do down Windows, like, so, right now.
+We wrote VS code through Windows, but it talks to WSL on the back end on Linux through SSH, right? So it's the same, so it's the same concept for cloud CDs, cloud web requirements. So basically just, we're using WSL today. Yeah. Would that work? It does. So this, this would make going through audit a lot easier because we, when they're going to ask us about.
+control environment for within development. Right now, there's we can't say much because it's only limited to the each developer's individual PC. Everyone can install their own packages, do whatever they want. Doing something like this, you can control individual environments. You can say this is my control set, all my developers can only connect to here and this is how that's how I'm controlling. Yeah, so like I can only speak to coder because it's only what I have experience with, but with coder like so.
+So like for the credit, like project, right, they could have like their own.
+their own environment. Snowflakes would have their own environment, maybe John and Michel have their own environment, but everybody on that team right gets this a standard set of curated curated environments, so everybody make sure that everybody has the same environment, all packages are the same, the same version, the platform is the same, so maybe the OS is the same version across of the band.
+Coder a decent option which is open source and we can, it's not free. It's not free. No, there is a free option. For Coder? Yeah. Oh, really? Yeah. Oh, okay. There's a free option, but there is a paid option too.
+See, do you have approved? They don't tell you what it is off the bat. I think there was, I looked up like online. He was like talking about online. I think it, or maybe try.
+What's sorry, say you might be for trial for 14 days or 15 days?
+The child version.
+Were you saying we could try it? Is that what you're saying? Yeah, yeah, yeah, yeah, we could, but yeah, there is a you get this stuff for free, but then, like, all this is like, so...
+Downside on this stuff is that, so if you're going with free, then I guess you'd have to manage it yourself, which means we'd have to handle the bootstrapping. So it runs in AWS, right? So we have to handle that part of it, and then you'll build in AWS.
+And is the paid version hosted? Yeah, it's hosted. Everything's hosted. So, as opposed to self-hosting in the free version, yeah, yeah, self-hosting, it means it's in AWS, yeah, so...
+
+Jean-Michel Caruge   1:09:23
+Guys, the other way we can do that also is that we allow people to have local environment, but they can actually only pool for some particular code factory or repo. So that we want to make sure that whatever they're installing on the computer, it's security scan, all kind of stuff.
+
+Boston Northern Ave - Large   1:09:37
+Yeah.
+Right, and that's something we could kind of enforce, but, like, at the end of the day, if you're in WSL, right, like, you can always go outside your environment and, you know, forcefully type install something, you have to go to that. So, like, one thing we'll be enforcing now and we're working with is to completely go at every download.
+So even for us, any tool that we are currently able to just download and install, I will say maybe IT people have a bit more privileges. All that's going to go away. So everything that you need from outside has to come in through an air gap security scan path. Yeah, so the network, if you do that, then what John...
+Yeah, Michel is saying it should work, because you always you only get to download those best fit components, yeah, and absolutely, so you can also enforce it at the, you know, at the product level too, using like UV and and just right, so you know have your just file, so see the requirements, my dependencies are this, this, and this.
+With this specific versions in versions, basically, and then you know that makes sure that that environments only have, you know, those those versions of those, sounds good, so that is, if that's the case, the reason I'm...
+We get, there's a fixed tax you have to pay, yeah, of course, just a vendor onboarding. If if there are things that we can get by without for now, that is all completely fine. I think the only the the the only downside is these laptops are garbage, yeah.
+I know there's talk of workstations coming in, but I'm not sure where we're at with those. Okay.
+So...
+
+Jean-Michel Caruge   1:11:28
+I was thinking for really hard ML work done quite. Can we have access to SageMaker in AWS native?
+
+Boston Northern Ave - Large   1:11:38
+Can you have access to what?
+
+Jean-Michel Caruge   1:11:39
+SageMaker, like notebooks.
+
+Boston Northern Ave - Large   1:11:42
+SageMaker, SageMaker, you get it from AWS, right? SageMaker is an AWS, so you should have. I think we could probably do WSL for now, if we need it, we just do Cloud Nine, right? And then, right, 'cause that's, that's it. I mean, I'll use log on for it to stay on WSL. OK, OK. I've never used it, OK.
+
+Jean-Michel Caruge   1:11:46
+Yeah.
+Yeah.
+
+Boston Northern Ave - Large   1:12:01
+When, so they see, it's just it's not that great. OK, experience is kind of ready. OK.
+OK, well, because cloud 9 will be able to be supposed to get the load off of your, yeah, yeah, so we can get into instances where, like, the latency, you know, even if it's only just like 1/2 a second between keystroke, it's still, it's not an alternate, it's a real time, and it will drive you crazy, so...
+How maybe we fast track just some developer machines just for us immediate hands-on voters. Yeah, we want to go to that now. So the last tab in here, I got team input from everyone through a survey.
+Thank you everyone for filling it out. But the response I got, a lot of them were about like the hardware too, right? So I got full participation, right? GitHub, we won by like a landslide, basically. Did anyone not have 32 gigs of RAM?
+'Cause if you don't, I don't even know how you're doing anything, but yeah, Jean Michel doesn't 'cause he was opting to wait for for the workstation, but it's been it's been a while for me now. Yeah, OK. What's the delay?
+Justin working with us HI. I'm not sure specifically where we're called off. I think the issue is getting developed or getting demo account or demo machines. OK.
+
+Jean-Michel Caruge   1:13:30
+Yeah, but now that we have now that we have a AWS operational, I can just go and spin beefy EC2s and then get that.
+
+Boston Northern Ave - Large   1:13:39
+Yeah, yeah. I mean, I would say, let's not go with, instead of, you know, desktops, maybe we stick with laptops, just more beefier versions to the extent we need, and everything else gets hosted on AWS. Yeah, I mean, another option is we could put instances, so AWS has a thing called bike sail.
+
+Jean-Michel Caruge   1:13:41
+So.
+
+Boston Northern Ave - Large   1:13:59
+Which is basically containers, and you do do work the same way, so you can make them any size you want, you know, any configuration you want, and then you still work the same way as you would never yourself, where you do SSH into them from here, and then OK.
+
+Jean-Michel Caruge   1:14:11
+Yes.
+
+Boston Northern Ave - Large   1:14:16
+That's fine. Yeah, so we just plan for... And you just have to make sure you have internet connectivity wherever you are, I guess. So, but if we just plan for WSL for the foreseeable future, then I can just plan security around WSL and it'll be fine. Yeah. Okay. Okay. So we just upgrade the laptops in that case. So could you, could we find, like, can someone take the...
+Just finding the appropriate laptop. Don't go too crazy. Don't go too steady. What would be the right laptop model? And we gotta at least get the developer strapped with that. I have, I have them. Logan and I sent them to Justin. We found the ones that they were buying. OK, yeah, the one I was.
+Alright, those are good. Yeah, first thing we wanna stay on Windows.
+Yeah, we have to. Yeah, for now we have to be onboarding Mac Linux. That's going to be as an official Northeast Bank supported operating system. That will be a much longer time. Okay. Okay. Yeah, that was the huge thing. Yeah. Without the survey, I'm going to have told.
+Come on, Windows is awesome. How much are these the laptops that you guys found? Trying to find them, not sure. I think, yeah, we it was like maybe thirty-one 100. Yeah, I was having a presentation and we did have some workstations picked out, I think sixty-four things of our.
+Yeah, they were just nice builds, yeah, very nice builds.
+My son's 10th birthday, 10th to 10 year old, he asked for a laptop. And so I just assumed he wanted like a gaming laptop. So I got him a nice fancy Windows gaming laptop. And he opened it up on his birthday. He was so disappointed. I was like, what's the problem? It's like, that's Windows. This is another thing that we found that we were going to ask about.
+Can we just buy from Lenovo Direct? Because when we were looking at Lenovo Direct versus SHI, it's like a $1200 markup on some of these machines per device. I, so three days after joining Northeast Bank, I got the crap laptop. I just asked how much it was. And then I found...
+SHI was charging us double. So I had Justin go back to SHI and re-baseline it. So that's what we can do here. Okay. It's purchase, we can purchase on Lenovo or we can just force SHI and give us at the same price. Okay. So can you shoot out an e-mail?
+Number one, just sending the specs out to the group so everyone can confirm, Jason, Jade, and all of you, that that's a good machine for the long term, right? At least think two, 2 1/2, three years down the line. And #2, send out the what's SHI price and what's the Lenovo price. Yeah.
+And we'll just ask just to get SHI down or buy from Lenovo. OK, yeah, these SHI guys are they, unless you're looking at them, then they're challenging, like, for nothing. OK, they're probably getting even cheaper than the retail price you see, right? They're buying in bulk, yeah, so...
+And it's not like we're getting warranty services through them, or really anything. I can't imagine where the extra cost comes from. Yeah, so we had one, we had one with an ultra set. It's an ultra 7.
+NVIDIA RTX Pro 500 Blackwell GPUs, 6 gig DDR 7, 32 gigs of RAM. We can go up to 64 if we want a TB hard drive and 3100 direct from another. Okay. I think it's 3500 if we go to 64 gigs of RAM. Okay. I think 64. I agree.
+Download the RAM, absolutely, yes.
+Is that, I mean, I'll send it out, but I think that's we we send it out, so obviously we will be choosy on who gets it, but we anybody who's doing any kind of development, if it doesn't have any software development security engineering, we'll will will after it.
+All right, so that takes care of it. Well, anything else left at this point? No, literally, it was like, I was gonna talk about, like, no, does that cover everything we need in our dev ecosystem at this point? Yeah, yeah, okay. From my like research and like talking to people, yeah, there was there was two things that actually...
+Praveena and Jean Michel mentioned separately an observability tool with Datadog was something that Praveena mentioned, and then Jean Michel was talking about ML Flow. I don't know if you guys want to speak on that those directly. Is it also?
+
+Jean-Michel Caruge   1:18:51
+Yeah.
+
+Boston Northern Ave - Large   1:18:52
+For what? Monitoring and observability tool for all the data flow and everything. And... Snowflake specifically, snowflake specifically, and for all the data flow. Oh, I see. So, you're saying like, if if if you can update, you make use of the PRTG as well? Yeah, so you're saying like, if something fails, like when you have to do these big uploads, you'll get a notification if it...
+Yeah, yeah, we're gonna want to restrict those off to lens anyway, it's already like we don't need to get it off of that.
+Actually, I think we really, isn't there a native snowflake or native AWS tool we can use here for this? Are we in this part? There's nothing. Snowflake later. Yeah, don't worry about that.
+So, and for observability, there are free tools that are probably better than Data Dog. We have this PRTG. That's what I was telling you this morning. We can make it upgrade it. Yeah, we can do that. Yeah, the problem is we just need another sensor. So we got to see if we can put a sensor in AWS, then we can use that. It'll.
+It handles it well. I mean, but for, you have a really good point about observability. It's an important thing. People need to know like what's out there, right? And so you want to have like a tool that does, that is easy for users that don't know data to be able to access what the data is. And even for engineers as the data ecosystem grows, we want to know like,
+You know, to find, you know, what your data dictionaries are, what the provinces are, the lineage, things like that.
+And I mean, Data Hub is a fine tool, but like Data Hub is free as well, the LinkedIn product, and it does all that as well, so I'm surprised, right? We're talking about Data Dog, Data Hub is a meta plain one, yeah, but then for the and all that has to be separated, and it's not Data Dog, that is maybe Horizon, right?
+Yeah, Snowflake has something without, no, for the the leader now with the data plane, it cancels the linear one, OK, and it's a better check, OK.
+But the one PRT, we can monitoring part, right? This is tool we look for monitoring as well, monitoring and observability both.
+The one which I was mentioning in the morning with the RTV, that's more beneficial for the Cognos perspective, like when the file get transferred and breakdown, it's both usable for both technical and business users as well. Good. So maybe one other field for here is where we get the...
+AWS, like the client desktop code, we want to feed the logs to the same tool, too. It helps everybody to either what happened, or anything that supports open telemetry, yeah, that's why it's good for us, yeah, it'll do it. OK, so it's, yeah, so if we do it, it'll actually do it really easy, because there's an agent on the PC.
+and they can be configured. So like if you point all the logs in a folder, then the agent can, you can set how periodically you want it to upload that whole folder, upload the whole folder, and then does the parsing in the cloud.
+And then Jean Michel, did you want to talk about ML flow?
+
+Jean-Michel Caruge   1:22:03
+Yeah, ML Flow is basically, you can think of this as a repository for machine learning and ML model. When you train a model, you want to basically register it, and you want to report the performance. And so ML Flow allows you to do that, and then you can, it's portable, so you could, you could.
+You could use Python, you could use any platform that allows you to open source, use open source ML flow.
+
+Boston Northern Ave - Large   1:22:30
+That's like in it all, right?
+
+Jean-Michel Caruge   1:22:32
+Yeah, that would be for ML Ops. So if you want to train a model, you have different versions of it, you can tag it, and then in production, in test, in development, you have one tag, and stage another tag, and in production, you can call it a tag. And also you can serve the model in production as well, like this.
+
+Boston Northern Ave - Large   1:22:50
+OK, I'm gonna ask a standard question: Is there a AWS native tool for this service for ML Ops?
+
+Jean-Michel Caruge   1:22:57
+Yeah, I think AWS is using a lot of open source stuff, so I think I haven't used it, but yeah, there is a way you can call ML flow through AWS.
+
+Boston Northern Ave - Large   1:22:59
+The.
+
+Jean-Michel Caruge   1:23:08
+But it's not, it's not, it's not it.
+
+Boston Northern Ave - Large   1:23:08
+OK, SageMaker might have some, right? Yeah, SageMaker probably might have.
+
+Jean-Michel Caruge   1:23:15
+What's that?
+
+Boston Northern Ave - Large   1:23:15
+SageMaker, SageMaker, AWS SageMaker, does it does it allow, does it lower all this stuff?
+
+Jean-Michel Caruge   1:23:20
+Yeah, so from SWS SageMaker, you can you can call ML flow. I was able to do, I did it also in Azure, so I was doing ML flow, so my guess is SageMaker, you should be able to do it. I can double check, but I'm almost sure.
+
+Boston Northern Ave - Large   1:23:37
+And let's start with SageMaker, then if it's there, then it's easy. Otherwise, we'll explore him as well.
+
+Jean-Michel Caruge   1:23:43
+Yeah.
+
+Boston Northern Ave - Large   1:23:45
+Cool, and it does say, uh, you know, SageMaker does provide analogs workflows.
+So, let's, yeah, let's find them.
+
+Jean-Michel Caruge   1:23:56
+Yeah.
+
+Boston Northern Ave - Large   1:23:58
+So the last thing on here that everyone, I got feedback from was the monitors, like having more screen real estate, we can make that like just a staple, like having a 1440p, like 27 inch monitor. So to view code on, it's a lot easier than.
+It improves productivity A lot. But other than that, that wraps up everything that I wanted to bring to you guys today. And I really appreciate you guys coming and listening. Nice work. So can we, first of all, fantastic work. Thank you very much. How much, how you manage your role in the service?
+So just to take our action items from here, the first one was...
+You had to do the comparison, yeah, yeah, with the, yeah, so that's one, we had, we have a clear direction on GR, so we have that started, but what was the second thing that we said with Bedrock, right? That's the term, so that also we should just go in, yeah, we should create a separate account.
+For this I.D. importing purposes, so we can track the cost. OK, then mixing in the other project specific accounts. OK, so that's that'll be you guys, Jason, and yeah, but maybe if you want to create individual accounts to that, you know, the better that we want to be using.
+And I track all the bedrock also has some cap. Everybody's going to hit those models, it might get as well, really? Yeah, it has a capacity from some gaps for one account overall model access influencing too, but cap to what?
+Entity level by is it for or for for account level for account level, yes, OK.
+But, I mean, usually we can have is that we can go to the cost of as well, otherwise, if you want the changes, then it's all missed traffic for everyone, yeah, on this week, how we attack it, all right, so we got that, Jira, Jira has done plot code.
+Is done. Yeah, what else is? There's the documentation part you said you want to kind of hold off on, yeah, yeah, you want a Jira comparison table, right? Better for Track it and then all the potential stuff that, yes, Jira, OK, yeah, but Jira, just the strategy, I mean, we have to go ahead, yeah, but everything else connected to Track it as well as the existing project management system.
+Got it, OK. All of that, so I think that's it. Do you mind just sending out some notes? Yeah, I've been transcribing the whole meeting to you, so I'll send it as well. Yeah, take out any of the dirty stuff.
+Yeah, thank you guys very much. Yeah, of course. Bye. Thank you. Thank you.
+
+Benjamin Thomas stopped transcription
